@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}
+        
+        .container {
+            width: 800px;
+            margin: 100px auto;
+            position: relative;
+        }
+        .container div {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+        }
+        .box1 {
+            top: 0;
+            left: 0;
+            background-color: blue;
+        }
+        .box2 {
+            background-color: greenyellow;
+            top: 75px;
+            left: 75px;
+            z-index: 1;
+            /* z축 순위 */
+        }
+        .box3 {
+            background-color: red;
+            top: 150px;
+            left: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

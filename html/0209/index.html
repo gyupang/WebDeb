@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+
+        background-color: rgba(138, 43, 226, 0.5);
+        /* 배경이 투명함 */
+        width: 300px;
+        height: 200px;
+
+    }
+
+    .box2 {
+        width: 300px;
+        height: 200px;
+        background-color: rgba(138, 43, 226);
+        opacity: 0.5;
+        /* 글자도 투명해짐 */
+    }
+
+    .box2:hover {
+        opacity: 1;
+    }
+
+    input[type=text] {
+
+        border: 3px solid green
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .hero-section {
+        font-size: 2em;
+    }
+
+    .hero-section>p {
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 8px !important;
+        /* !important 최우선으로지정 */
+    }
+
+
+    .container {
+        max-width: 1200px;
+        height: 800px;
+        border: 1px solid black;
+        margin: 50px auto;
+        position: relative;
+
+    }
+
+    .row {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .row::after {
+        content: "";
+        display: table;
+        clear: both;
+
+    }
+
+
+    .col-3 {
+        width: 25%;
+        float: left;
+        background-color: aqua;
+    }
+
+    .col-12 {
+        width: 100%;
+        background-color: aquamarine;
+    }
+
+    .boxin {
+        width: 80%;
+        line-height: 100px;
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .clear::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* float 다음 클리어 공식 */
+
+
+    .box3 {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        position: absolute;
+        left: calc(50% - 100px);
+        /* 반응형에서 가운데정렬 맞추는 공식 방법 */
+
+        top: 300px;
+    }
+</style>
+
+
+<body>
+    <div class="box">sds</div>
+    <div class="box2">sds</div>
+    <input type="text">
+
+    https://www.w3schools.com/css/css_attribute_selectors.asp
+
+    [title~="flower"]
+    [attribute|="value"]
+    [attribute^="value"]
+
+    안녕하세요
+    <div class="hero-section">안녕하세요1~
+        <p>안녕하세요 2</p>
+
+    </div>
+
+    <div class="container clear">
+        <div class="box3"></div>
+
+        <div class="col-3">
+            <div class="boxin">1</div>
+
+        </div>
+        <div class="col-3">
+            <div class="boxin">2</div>
+        </div>
+        <div class="col-3">
+            <div class="boxin">3</div>
+        </div>
+        <div class="col-3">
+            <div class="boxin">4</div>
+        </div>
+
+
+
+    </div>
+    <div class="col-12">
+        <div class="boxin">5</div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>

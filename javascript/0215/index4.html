@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Moving</title>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <link rel="stylesheet" href="car.css">
+    <style>
+
+
+
+
+    </style>
+
+</head>
+
+<body>
+<div class="mycar">
+    <img class="cloud" src="../img/air.gif" alt="">
+
+
+</div>
+<div class="park"></div>
+
+
+
+    <script>
+      $(document).ready(function (){
+           $(document).keydown(function(e){
+switch(e.keyCode){
+case 37:
+$('.cloud').show()
+$('.mycar').css('transform','rotate(270deg)').stop()
+.animate({
+    left:'-=200px'
+},200,
+function(){
+$('.cloud').hide();
+
+}
+)
+
+break;
+case 38:
+$('.cloud').show()
+$('.mycar').css('transform','rotate(0deg)').stop()
+.animate({
+    top:'-=200px'
+},200,function(){
+    $('.cloud').hide();
+}
+
+)
+
+break;
+case 39:
+$('.cloud').show()
+$('.mycar').css('transform','rotate(90deg)').stop()
+.animate({
+    left:'+=200px'
+},200,function(){
+    $('.cloud').hide();
+})
+
+break;
+case 40:
+$('.cloud').show()
+$('.mycar').css('transform','rotate(180deg)').stop()
+.animate({
+    top:'+=200px'
+},200,function(){
+    $('.cloud').hide();
+})
+
+break;
+default:
+$('.mycar').stop()
+break;
+
+
+
+}
+
+           });
+
+
+
+
+            }); //JQ
+
+// 37 38 39 40
+
+
+    </script>
+
+</body>
+
+</html>

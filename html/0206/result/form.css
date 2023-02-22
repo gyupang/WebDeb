@@ -1,0 +1,84 @@
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #555555;
+}
+
+.container {
+    width: 800px;
+    margin: 80px auto;
+}
+
+.container ul {
+    /* 바로 아래만 포함 */
+    list-style-type: none;
+}
+
+.container li {
+    /* 여러단계 아래 포함 */
+    border-top: solid 1px #56b2be;
+}
+
+.container li:last-child {
+    border-bottom: solid 1px #56b2be;
+}
+.container span{
+    display: inline-block;
+    /* block, inline, table 레이아웃: inline-block flex grid */
+    width: 150px;
+    height: 100%;
+    background-color: rgb(230, 233, 235);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 25px;
+    font-weight: bold;
+    margin-right: 20px;
+   
+}
+.container label{
+    margin-right: 15px;
+}
+
+.check{
+    background: url(img/check1.png) no-repeat 5px 8px;
+    background-size: 12%;
+}
+
+input{
+    display: inline-block;
+    /* border-radius: 5px */
+
+}
+.btn-box{
+    padding-top: 10px;
+    text-align: center;
+}
+.myButton {
+	box-shadow:inset 0px 35px 0px -24px #e67a73;
+	background-color:#e4685d;
+	border-radius:4px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	padding:15px 20px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+.myButton:hover {
+	background-color:#eb675e;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+input[type=text]{
+border:  1px solid #999;
+padding: 5px 15px;
+
+
+} 
+/* 속성타입 스타일지정할때 */

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+const userEmail =prompt("이메일주소는?")
+const arrUrl = ["co.kr", "com", "net", "pe.kr", "or.kr", "go.kr"]
+
+
+let chk1 = false;
+let chk2 = false;
+
+
+if(userEmail.indexOf('@')>0){
+    chk1 = true;
+}
+for(let i=0; i<arrUrl.length; i++){
+if(userEmail.indexOf(arrUrl[i])>0){
+    chk2 = true;
+}
+}
+if(chk1 && chk2){
+    document.write(userEmail)
+}else{
+    alert('다시 입력')
+}
+   
+
+
+
+</script>
+
+<body>
+<!-- 이메일 검증 테스트 -->
+<!-- 1. @ 있는지 확인
+     2. urrUrl 이 포함되었는지 확인
+     3. 1,2 성공하면 이메일 주소출력
+     4. 실패하면 alert('이메일을 똑바로 입력하세요') 
+-->
+
+
+</body>
+
+</html>

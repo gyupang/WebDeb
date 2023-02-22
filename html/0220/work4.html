@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 꾸미기</title>
+    <style>
+
+/* 111111111
+img{
+    width: 400px;
+    height: 300px;
+} */
+
+/* 22222222222
+.box1{
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+} */
+
+/* 3333333333333
+.box2{
+    width: 400px;
+    height: 300px;
+background: url(../img/flex/008.gif);
+background-size: cover;
+
+} */
+
+/* 444444444 */
+.box1 img{
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    /* contain, fill(기본값) */
+object-position: bottom;
+
+/* 공부 */
+}
+
+button{
+font-size: 20px;
+padding: 8px 20px;
+background-color: transparent;
+cursor: pointer;
+border: none;
+
+}
+
+button:hover{
+    color: lightslategray;
+    border: 2px dotted red;
+}
+button:active{
+color: lightsteelblue;
+
+}
+
+.abtn a{
+text-decoration: none;
+color: black;
+border: 1px solid #000;
+background-color: rgb(240, 240, 240);
+font-size: 14px;
+font-weight: 400;
+padding: 1px 6px;
+}
+.abtn a:hover{
+    cursor:default;
+}
+
+    </style>
+
+</head>
+
+<body>
+<div class="box1">
+<img src="../img/flex/005.gif" alt="">
+</div>
+
+<div class="box2"></div>
+
+<button>버튼</button>
+
+<div class="abtn">
+<a href="#">네이버 이동</a>
+</div>
+<br>
+<input type="button" value="버튼">
+
+</body>
+
+</html>

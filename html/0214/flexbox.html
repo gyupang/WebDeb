@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX BOX</title>
+    
+    <style>
+.container{
+    height: 500px;
+background-color: dodgerblue;
+display: flex;
+/* flex는 부모가 같는 옵션 */
+flex-direction: column;
+/* 상자 방향 */
+flex-wrap: wrap;
+/* 줄바꿈 */
+
+flex-flow: row wrap;
+/* direction wrap 한번에 */
+
+justify-content:space-around;
+/* row-revers는 번호도 반대로 붙음 flex-end와 번호방향 다름*/
+
+
+
+
+
+
+align-items:flex-start;
+/* streich 기본값 - 박스 늘어남
+flex-start,end, 
+
+
+*/
+align-content:space-between;
+
+
+
+
+
+
+}
+
+
+
+.container>div{
+    margin: 10px;
+    padding: 50px;
+    font-size: 50px;
+    background-color: #ededed;
+}
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>2</div>
+        <div>3</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+
+
+
+    <script>
+ 
+    </script>
+</body>
+
+</html>

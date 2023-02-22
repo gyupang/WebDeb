@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+.first{
+width: 300px;
+height: 300px;
+background-color: aquamarine;
+text-align: center;
+/* vertical-align 인라인에서만 작용 (블럭에서 작용안함) */
+white-space: normal;
+overflow:hidden;
+border-radius: 50%;
+}
+img{
+width: 250px;
+vertical-align: middle;
+
+}
+
+.boxa{
+width: 300px;
+height: 300px;
+background-color: #f5eaea;
+}
+.boxb{
+width: 300px;
+height: 300px;
+background-color: #f5eaea;
+border-left: 10px black solid;
+}
+
+.boxc{
+width: 300px;
+height: 300px;
+background-color: #f5eaea;
+border: black dotted 2px;
+}
+
+.boxd{
+width: 300px;
+height: 300px;
+background-color: #f5eaea;
+border-radius: 50% 0%;
+}
+
+.boxe{
+width: 300px;
+height: 300px;
+background-color: #f5eaea;
+border-bottom: black solid 3px;
+}
+
+.boxf{
+width: 300px;
+height: 300px;
+background-color: #f5eaea;
+border-radius: 50%;
+border: black solid 3px;
+}
+
+
+</style>
+
+
+</head>
+<body>
+    <p class="first">국가안전보장회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다.
+        행정각부의 설치·조직과 직무범위는 법률로 정한다. 대통령은 헌법과 법률이 정하는 바에 의하여 공무원을 임면한다. 누구든지 병역의무의 이행으로 인하여 불이익한 처우를 받지 아니한다. 대통령의 선거에 관한 사항은 법률로 정한다.
+
+지방자치단체는 주민의 복리에 관한 사무를 처리하고 재산을 관리하며, 법령의 범위안에서 자치에 관한 규정을 제정할 수 있다.
+    국회나 그 위원회의 요구가 있을 때에는 국무총리·국무위원 또는 정부위원은 출석·답변하여야 하며, 국무총리 또는 국무위원이 출석요구를 받은 때에는 국무위원 또는 정부위원으로 하여금 출석·답변하게 할 수 있다.</p>
+    <img src="../0201/images/imgpng.png" alt="배경">
+
+    <p class="boxa"></p>
+    <p class="boxb"></p>
+    <p class="boxc"></p>
+    <p class="boxd"></p>
+    <p class="boxe"></p>
+    <p class="boxf"></p>
+<!-- white space - CSS 공백 속성 -->
+white-space: nowrap; normal; pre;
+normal - 기본값, 박스를 벗어나면 줄바꿈
+nowrap - 줄바꿈 금지, 박스를 벗어나도 한줄로 표현
+pre html - 소스에 쓰여진대로 표현
+pre wrap - 소스에 쓰여진대로 표현, 박스를 벗어나면 줄바꿈이 일어남
+pre line - pre wrap과 같지만 띄어쓰기는 한칸만 인식
+
+overflow:hidden;
+
+text-overflow:ellipsis;
+
+<!-- CSS Borders -->
+border-style 속성은 표시할 테두리 종류를 지정합니다
+dotted- 점선 테두리를 정의합니다.
+dashed- 점선 테두리를 정의합니다.
+solid- 솔리드 테두리를 정의합니다.
+
+border-width 속성은 네 테두리의 너비를 지정
+border-width (위쪽 테두리, 오른쪽 테두리, 아래쪽 테두리 및 왼쪽 테두리)
+
+<!-- CSS Rounded Borders 둥글게 -->
+border-radius
+
+<!-- border 속기속성 -->
+border:width, style(필수의), color; 
+
+
+
+
+</body>
+</html>

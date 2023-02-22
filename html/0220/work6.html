@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 꾸미기</title>
+    <script src="../../javascript/jquerymin.js"></script>
+    <style>
+        /* body {
+            display: block;
+            border: 2px solid #ccc;
+            color: #ccc;
+            padding: 8px;
+            margin: 20px;
+
+        } */
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <ul>ul
+                <li>li
+                    <span></span>
+                </li>
+            </ul>
+        </div>
+        <div>div
+            <p>p
+                <span>span</span>
+            </p>
+        </div>
+    </div>
+
+
+    <div>
+        <p>p</p>
+        <span>span</span>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <p>p</p>
+
+    </div>
+
+
+
+    <script>
+        $(function () {
+            $('div').children().css({
+                "border": "2px solid red"
+                // siblings(), next(), nextAll(), nextUntil(),
+                // prev(), prevAll(), prevUntil()
+
+
+            });
+
+            $('h2').nextAll().css({
+                "color": "blue",
+                "border": "2px solid blue"
+
+
+
+            });
+
+        }); ///jq
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

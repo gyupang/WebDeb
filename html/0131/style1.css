@@ -1,0 +1,46 @@
+#box1 {
+    font-size: 20px;
+    color: goldenrod;
+}
+
+.a{
+    color: brown;
+}
+div{color: black}
+span{color: black}
+
+#id{color: black}
+.class{color: black}
+요소{color: black}
+/* id > class > 요소 순위로 적용 */
+
+
+div .abc{color: black}
+/* 한칸 띄면 하위 요소선택 */
+
+div.abc{color: black}
+/* div 이면서 .abc 클래스인요소 */
+
+
+/* 코드 작성 스타일 */
+
+.chapter{
+    color: green;
+}
+#chapter1-1 h2{
+    color: dodgerblue;
+}
+#chapter1-1 p{
+    background-color: tomato;
+}
+#chapter1-2{
+    color: blueviolet;
+}
+#chapter1-2 a{
+    color: wheat;
+}
+
+#chapter1-3 p{
+    color: red;
+    background-color: teal;
+}

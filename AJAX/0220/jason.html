@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../javascript/jquerymin.js"></script>
+    <style>
+
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div id="viewbox"></div>
+    <button id="box1">Get AJAX</button>
+
+    <h1 class="cityname"></h1>
+    <p class="temp"></p>
+    <p class="icon"></p>
+    <p class="desc"></p>
+
+
+    <script>
+        $(function () {
+            // $(선택자).load('주소');
+            // $(선택자).get('주소,정보');
+            // // 파라미터창으로 정보를 보내고 주소에서 정보를 받아옴
+            // $(선택자).post('주소,정보');
+            // $(선택자).ajax('주소,정보');
+
+            $('button').click(function () {
+                $('#viewbox').load('demo.txt');
+                // $('#viewbox').load('demo.txt #box1');
+                // #box1 만 불러오기?? 안됨
+
+                jQuery.ajax({
+                    url: 'https://api.openweathermap.org/data/2.5/weather',
+                    data: {
+                        lat: 37.6449061,
+                        lon: 126.6695965,
+                        appid: 'f35962228bbe03545bc15c66b0cab317',
+                        lang:'kr',
+                        units:'metric'
+                    },
+                    dataType: 'JSON',
+                    success: function (data) {
+                        console.log(data);
+                        $('.cityname').html(data.name);
+                        $('.temp').html(data.main.temp);
+            
+                    },
+                    error: function (xhr, status, error) {
+                        alert('에러!');
+                    }
+
+                });
+
+
+
+            });
+        });//jq
+
+
+    </script>
+</body>
+
+</html>

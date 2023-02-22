@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 꾸미기</title>
+    <style>
+        .container {
+            width: 1200px;
+            background: #fefefe;
+            padding: 50px;
+            border: 2px solid #ddd;
+            color: lightgrey;
+            margin: 15px auto;
+
+        }
+
+        .container>div {
+            width: 500px;
+            margin: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <ul>ul
+                <li>li
+                    <span></span>
+                </li>
+            </ul>
+        </div>
+        <div>div
+            <p>p
+                <span>span</span>
+            </p>
+        </div>
+
+
+
+
+    </div>
+
+    <script src="../../javascript/jquerymin.js">
+    </script>
+
+    <script>
+        $(function () {
+            // parent() 부모, parents() 조상,
+            //  prentsunuill() 조상중 .. 까지
+
+            $('span').parent().css({
+                "color": "red",
+                "border": "2px, solid, red"
+            });
+
+
+
+
+        }); ///jq
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

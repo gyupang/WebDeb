@@ -1,0 +1,18 @@
+button{
+
+    background-color: rgb(98, 98, 223);
+    color: aliceblue;
+    width: 150px;
+    height: 50px;
+    border-radius:5%;
+    border: orange solid 3px;
+    margin: 5% 35%;
+}
+
+label{
+    display: inline-block;
+width: 120px;
+height: 50px;
+background-color: rgb(228, 230, 231);
+
+}

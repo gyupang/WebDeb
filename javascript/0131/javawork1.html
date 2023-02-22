@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+let x = "3.14";
+document.write(typeof x);
+
+x=Number(x);
+document.write(typeof x);
+
+//삼항 조건 연산자*****
+// (조건식)? 참일때 결과: 거짓일때 결과;
+let a = 10;
+let b = 3;
+let result=(a<b)? "딩동":"땡";
+document.write(result);
+
+// let r = confirm("asfd"); //확인 true 취소 false
+//document.write(r);
+
+// 정상체중범위 구하기
+
+let height = prompt("신장은??","0");
+let weight = prompt("몸무게는??","0");
+let ans = "님의 키는" + height +"cm 이며 몸무게는"+weight+"kg 입니다"; 
+document.write(ans);
+
+let normal = (height-100)*0.9;
+let good=(weight>=normal-5 &&weight<=normal+5)? "정상범위":"비정상";
+document.write(normal);
+document.write(good);
+
+
+// // 하루 지출비 돈관리 계산
+// const bus = 4000;
+// const food = 9000;
+// const drink = 3000;
+// let today = bus+food+drink;
+// document.write(today);
+// let money=(today>15000)? today -15000+"초과":"잘했어요";
+// document.write(money);
+
+
+// // 판매량 기준 계산
+// const first = 1200;
+// const second = 1300;
+// const third = 1000;
+// const avg = (first+second+third)/3    //평균판매량
+// let last =prompt("매출은??","0"); 
+// let nice = (last>=avg)? "잘했어요":"노력하세요"
+// document.write(last);
+// document.write(nice);
+
+
+
+    </script>
+
+
+    
+
+    
+</body>
+</html>

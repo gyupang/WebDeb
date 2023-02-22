@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery slideToggle</title>
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <style>
+        .apc{
+            width: 240px;
+            height: 240px;
+            margin: 100px auto;
+            background: url(../img/nomelong.png) no-repeat;
+            position: relative;
+        }
+.tong{
+    width: 50px;
+    height: 59px;
+    position: absolute;
+    top: 110px;
+    left: 90px;
+    display: none;
+}
+h1{
+position: absolute;
+width: 100%;
+text-align: center;
+top: -70px;
+
+
+
+}
+    </style>
+
+</head>
+
+<body>
+
+    <div class="apc">
+        <h1>메롱</h1>
+        <div class="tong">
+<img src="../img/tong.png" alt="melong">
+
+            </div>
+
+
+    </div>
+  
+
+
+    <script>
+$(document).ready(function(){
+$(".apc").hover(function(){
+$(".tong").slideToggle();
+$('h1').fadeToggle();
+
+});
+
+
+}); //JQ
+
+
+      
+    </script>
+
+</body>
+
+</html>

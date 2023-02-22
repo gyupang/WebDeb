@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1,
+        .box2 {
+            /* width: 200px; */
+            height: 200px;
+            display: block;
+        }
+
+        .box1 {
+            background-color: red;
+            width: 1200px;
+            /* 작은창에서도 1200px 고정 */
+            position: static;
+        }
+
+        .box2 {
+            background-color: orange;
+            max-width: 1200px;
+            /* 늘어나다가 최대 1200px */
+            position: absolute;
+            top: 100px;
+        }
+
+        .container {
+            width: 900px;
+            height: 500px;
+            background-color: lightslategrey;
+            position: relative
+        }
+
+        .img {
+            max-width: 100%;
+            display: none;
+        }
+
+        .gallery:hover .img {
+            display: block;
+        }
+
+        .top {
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            background-color: black;
+            position: fixed;
+            right: 20px;
+        }
+
+        .top a {
+            color: aliceblue;
+            text-decoration: none;
+            font-size: 19px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box1">써 동경과 나는 둘 하나의 한 같이 노루, 하나에 거외다. 피어나듯이 위에도 너무나 어머니, 속의 잠, 거외다. 애기 추억과 언덕 듯합니다. 이름과 동경과 당신은 소녀들의 새워
+        이국 하나에 이 거외다. 무덤 이런 별빛이 별 가득 못 오는 어머니, 하나에 까닭입니다. 우는 노새, 겨울이 까닭입니다.
+
+        된 가을로 어머니 이름과, 마리아 당신은 하나에 둘 까닭입니다. 같이 남은 시와 패, 이네들은 차 파란 불러 거외다. 무성할 별을 아이들의 추억과 것은 하나에 이름과, 까닭입니다. 슬퍼하는 봄이 차 내
+        하나에 마디씩 시인의 다 밤이 거외다. 이름자를 묻힌 무덤 자랑처럼 까닭입니다.
+
+        무성할 이런 패, 겨울이 북간도에 멀리 같이 언덕 별 봅니다. 아스라히 못 오면 써 까닭입니다. 책상을 새워 내 있습니다. 강아지, 새워 계절이 이국 오는 지나가는 가난한 봅니다. 노새, 책상을
+        슬퍼하는 나는 잠, 다 거외다. 가을 릴케 벌레는 차 이름을 별들을 있습니다.</div>
+    <div class="box2">써 동경과 나는 둘 하나의 한 같이 노루, 하나에 거외다. 피어나듯이 위에도 너무나 어머니, 속의 잠, 거외다. 애기 추억과 언덕 듯합니다. 이름과 동경과 당신은 소녀들의 새워
+        이국 하나에 이 거외다. 무덤 이런 별빛이 별 가득 못 오는 어머니, 하나에 까닭입니다. 우는 노새, 겨울이 까닭입니다.
+
+        된 가을로 어머니 이름과, 마리아 당신은 하나에 둘 까닭입니다. 같이 남은 시와 패, 이네들은 차 파란 불러 거외다. 무성할 별을 아이들의 추억과 것은 하나에 이름과, 까닭입니다. 슬퍼하는 봄이 차 내
+        하나에 마디씩 시인의 다 밤이 거외다. 이름자를 묻힌 무덤 자랑처럼 까닭입니다.
+
+        무성할 이런 패, 겨울이 북간도에 멀리 같이 언덕 별 봅니다. 아스라히 못 오면 써 까닭입니다. 책상을 새워 내 있습니다. 강아지, 새워 계절이 이국 오는 지나가는 가난한 봅니다. 노새, 책상을
+        슬퍼하는 나는 잠, 다 거외다. 가을 릴케 벌레는 차 이름을 별들을 있습니다.</div>
+    <div class="container">
+        <div class="gallery">1
+            <img src="../img/imgpng.png" class="img" alt="001">
+        </div>
+        <div class="gallery">2
+            <img src="../img/imgpng.png" class="img" alt="002">
+        </div>
+        <div class="gallery">3
+            <img src="../img/imgpng.png" class="img" alt="003">
+        </div>
+
+    </div>
+    <div class="top"></div>
+
+
+
+    Block - form, div, p, h1, header, main, section
+
+    inline - span, a, img, input
+
+    display:none // visivility:hidden
+    <!-- 사라짐       투명해짐(자리차지상태) -->
+
+    position:static; - 기본값, 박스는 위치값을 갖지 않으며(위치속성 적용X) 주변 상황에 맞게 위치
+    position:absolte; - 주변에 다른 것과 상관없이 자기의 위치값을 갖는다
+    단 부모가 위치값을 갖고있다면 부모로부터 좌표시작
+    position:relative; - 특성둘다 보유? 자식이 absolute면 부모는 relative 공식!
+                      - relative 설정후 margin:auto 센터잡아줌
+    position:sticky; - 스크롤 위치에 따라 relative와 fixed를 전환
+    position: fixed; - 뷰포트를 기준으로 배치
+</body>
+
+</html>

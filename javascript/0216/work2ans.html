@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquerymin.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 1200px;
+            margin: 10px auto;
+
+
+        }
+
+        .gallbox {
+            border: 1px solid #ddd;
+            width: 500px;
+
+        }
+
+        .big>img {
+            max-width: 100%;
+
+
+        }
+
+        .smimg {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .smimg>img {
+            width: 120px;
+            cursor: pointer;
+        }
+
+        /* 텍스트 내용 */
+
+        .h1 {
+            font-size: 50px;
+            display: none;
+
+        }
+
+        .h1.show {
+            display: block;
+        }
+    </style>
+
+
+</head>
+
+
+
+
+<body>
+    <div class="container">
+        <div class="gallbox">
+
+            <div class="bigimg">
+                <img src="../img/apeach.png" alt="#">
+
+            </div>
+
+            <div class="smimg">
+                <img src="../img/nomelong.png" alt="#">
+                <img src="../img/melong.png" alt="#">
+                <img src="../img/apeach.png" alt="#">
+            </div>
+        </div>
+    </div>
+
+
+    <button>보이기 안보이기</button>
+    <h1 class="h1 show"> 텍스트 입니다</h1>
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('.smimg>img').click(function () {
+                const img = $(this).attr('src');
+                $('.bigimg>img').attr('src', img);
+
+            });
+
+            $('.gallbox').click(function () {
+                // $(this).remove();
+                // 갤박스 누르면 삭제
+                // $(this).empty();
+                //갤박스 누르면 내용비움
+
+                // addClass(), revoveClass(), toggleClass(),
+                // + hasClass() 클라스가 있는지 여부
+
+
+            });
+
+
+            $('button').click(function () {
+                $('.h1').toggleClass('show')
+                // 클라스 토글 기능
+
+            });
+
+
+
+
+
+
+        }); //jq
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

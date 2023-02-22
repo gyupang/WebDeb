@@ -1,0 +1,34 @@
+body{
+overflow: hidden;
+
+}
+
+.mycar{
+width: 100px;
+height: 69px;
+position: absolute;
+background: url(../img/bcar.png) no-repeat;
+transform: rotate(180deg);
+
+}
+
+.cloud{
+position: absolute;
+left: 18px;
+bottom: -70px;
+display: none;
+
+}
+
+.park{
+box-sizing: border-box;
+width: 80px;
+height: 80px;
+border-left: 10px solid black;
+border-right: 10px solid black;
+position: fixed;
+right: 50px;
+bottom: 50px;
+
+
+}

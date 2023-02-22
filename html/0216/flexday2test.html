@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .container {
+        /* width: 1200px; */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+
+    .container>div {
+
+        text-align: center;
+        margin: 10px;
+        flex: auto
+    }
+
+
+    @media only screen and (max-width:1200px) {
+        .container>div {
+            flex: 33.3%
+        }
+
+    }
+    @media only screen and (max-width:600px) {
+        .container>div {
+            flex: 100%
+        }
+
+
+
+    }
+
+
+    img {
+        width: 250px;
+
+
+    }
+</style>
+
+
+
+
+<body>
+
+    큰화면 4개
+    태블릿 3개 1200px
+    모바일 1개 600px
+
+
+    <div class="container">
+        <div><img src="../img/flex/001.gif" alt="#"> </div>
+        <div><img src="../img/flex/002.gif" alt="#"></div>
+        <div><img src="../img/flex/003.gif" alt="#"></div>
+        <div><img src="../img/flex/004.gif" alt="#"></div>
+        <div><img src="../img/flex/005.gif" alt="#"></div>
+        <div><img src="../img/flex/006.gif" alt="#"></div>
+        <div><img src="../img/flex/007.gif" alt="#"></div>
+        <div><img src="../img/flex/008.gif" alt="#"></div>
+        <div><img src="../img/flex/009.gif" alt="#"></div>
+        <div><img src="../img/flex/010.gif" alt="#"></div>
+        <div><img src="../img/flex/011.gif" alt="#"></div>
+        <div><img src="../img/flex/012.gif" alt="#"></div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>

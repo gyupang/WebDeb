@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    자바스크립트 삼항연산
+    (조건)? true:false;
+
+    true일때 실행문이 여러개, 길거나
+    false일때 여러개 있거나 길다면?
+
+    if 조건문 : 만일 ~가 ~하다면 ~이다 if(조건문)(실행문)
+
+
+
+    <script>
+        // if(1){} 1은 true 0은 false
+
+        let num = 10
+        if (num < 100) {
+            document.write("안녕?")
+        }
+        /*let walk = prompt('당신이 하루에 걷는 양은 몇보인가요?', "0")
+                if(walk>10000){
+                    document.write("매우좋은습관")
+                } */
+
+        // let visit = prompt("성함이?", "홍길동")
+        // if(visit){
+        //     document.write(visit+"님 환영")
+        // }else{
+        //     document.write("이름쳐!!")
+        // }
+
+
+        //
+        // let rs = confirm("정말로 탈퇴??")
+        // if(rs){
+        //     let r = confirm("진짜 탈퇴?")
+        //     if(r){
+        //     }
+        // }else{
+        //     document.write("그래")
+        // }
+
+        // else if 문
+        // if(조건1){
+        // }else if(조건2){
+        // }else if(조건3){
+        // }else{
+        // }
+
+
+        // 연습 1 
+
+        // let ans = prompt("창으로 지금은 몇 월입니까?","0");
+        // if(ans==12||ans==1||ans==2){
+        //     document.write("스키타는 계절");
+        // }else if(ans==3||ans==4||ans==5){
+        //     document.write("봄입니다");
+        // }else if(ans==6||ans==7||ans==8){
+        //     document.write("여름입니다");
+        // }else if(ans==9||ans==10||ans==11){
+        //     document.write("가을입니다");
+        // }else{
+        //     document.write("정확한 month");
+        // }
+
+        // 연습 2
+        let id = "myzen";
+        let pw = "1234567";
+
+        let idn = prompt("아이디?");
+        let pwn = prompt("비번은?");
+        // 모두성공하면 000방갑, 로그인
+        //아이디틀리면 아이디틀림
+        //비번틀리면 비번틀림
+
+        if (idn == id) {
+            if (pwn == pw) {
+                document.write("로그인 완료!");
+            } else {
+                document.write("비번이 틀렸습니다");
+            }
+        } else {
+            document.write("아이디가 틀렸습니다.");
+        }
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

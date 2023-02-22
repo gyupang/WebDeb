@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALBA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Nanum+Gothic+Coding:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        letter-spacing: -1px;
+        font-family: 'Nanum Gothic Coding', monospace;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        text-align: center;
+        width: 580px;
+        max-width: 90%;
+        border: 1px solid #eaedf3;
+        margin: 40px auto 50px;
+        padding: 0 40px 60px;
+    }
+
+    .head {
+        padding: 30px 0 16px;
+        border-bottom: 1px solid #eaedf3;
+        text-align: center;
+        letter-spacing: -3px;
+    }
+
+    h1 {
+        font-weight: 800;
+        font-size: 26px;
+    }
+
+    .signup a,
+    .company a {
+        text-decoration: none;
+
+    }
+
+    /* 개인회원 */
+    .signup {
+        padding: 32px 0;
+
+    }
+
+    i {
+        display: inline-block;
+    }
+
+    .signup i {
+        background: url(/html/img/alba1.png) no-repeat;
+        background-size: 200%;
+        width: 48px;
+        height: 48px;
+    }
+
+    .person1 {
+
+        font-size: 14px;
+        color: #363e4d;
+
+    }
+
+    .person2 {
+        font-size: 13px;
+        color: #959ba6;
+
+    }
+    .person3{
+        background-color: #fff230 ;
+    }
+
+    /* 연동회원가입 */
+    .loginchain ul {
+        padding: 0;
+        display: flex;
+
+
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    ul>li {
+        width: 25%;
+
+    }
+
+    ul li a {
+        color: #4d5260;
+        text-decoration: none;
+    }
+
+    .loginchain {
+        border: 1px solid #eaedf3;
+        border-radius: 10px;
+
+        font-size: 13px;
+        color: #666;
+    }
+
+    .naver i {
+        background: url(/html/img/Slice1.png) no-repeat -33px;
+        background-size: 400%;
+        width: 18px;
+        height: 18px;
+    }
+
+    .kakao i {
+        background: url(/html/img/Slice1.png) no-repeat -52px;
+        background-size: 400%;
+        width: 18px;
+        height: 18px;
+    }
+
+    .face i {
+        background: url(/html/img/Slice1.png) no-repeat -17px;
+        background-size: 400%;
+        width: 18px;
+        height: 18px;
+    }
+
+    .apple i {
+        background: url(/html/img/Slice1.png) no-repeat;
+        background-size: 400%;
+        width: 18px;
+        height: 18px;
+    }
+
+    /* 기업회원 */
+    .company {
+        padding: 32px 0;
+
+    }
+
+    .company i {
+        background: url(/html/img/alba1.png) no-repeat 100%;
+        background-size: 200%;
+        width: 48px;
+        height: 48px;
+    }
+
+
+
+
+    /* 전화번호 */
+    .call {
+        line-height: 42px;
+        border: 1px solid #eaedf3;
+        text-align: center;
+        font-size: 12px;
+        border-radius: 10px;
+
+    }
+
+    .call>a {
+        color: #4d5260;
+        text-decoration: none;
+    }
+</style>
+
+
+<body>
+    <div class="container">
+        <div class="head">
+            <h1>알바천국 회원가입을 환영합니다.</h1>
+        </div>
+
+        <div class="signup">
+            <a href="#">
+                <i></i>
+                <p class="person1">개인회원</p>
+                <p class="person2">알바,천국에 다 있어요.</p>
+                <div class="person3">개인회원 가입하기</div>
+            </a>
+
+
+        </div>
+
+        <div class="loginchain">
+            <ul>
+                <li><a href="#" class="naver"><i></i> 네이버</a> </li>
+                <li><a href="#" class="kakao"><i></i> 카카오</a> </li>
+                <li><a href="#" class="face"><i></i> 페이스북</a> </li>
+                <li><a href="#" class="apple"><i></i> Apple</a> </li>
+            </ul>
+
+        </div>
+
+        <div class="company">
+            <a href="#">
+                <i></i>
+                <p class="person1">기업회원</p>
+                <p class="person2">알바생,천국에 다 있어요.</p>
+                <p class="person2">[사업자등록번호 필수입력]</p>
+                <div class="person4">기업회원 가입하기</div>
+            </a>
+        </div>
+
+        <div class="call">
+            <a href="#">빠르고 간편한 공고등록대행
+                <span>1661-2544</span>
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+
+
+</html>

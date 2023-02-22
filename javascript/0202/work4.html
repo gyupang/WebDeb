@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let sum = 0;
+        for (let i = 1; i <= 100; i++) {
+            sum += i;
+        }
+        console.log("합계는 " + sum);
+
+
+        // 5m+3n+나머지
+        // let mk = parseInt(prompt("마스크는 몇개입니까?"));
+        // let five = 0;
+        // let three = 0;
+
+        // for (let i = 0; i <= parseInt(mk / 5); i++) {
+        //     five = i
+
+        // } if ((mk - (five * 5)) >= 3) {
+        //     for (let i = 0; i <= parseInt((mk - (five * 5)) / 3); i++) {
+        //         three = i
+        //     }
+        // } else if ((mk - (five * 5)) == 0) {
+        // } else {
+        //     document.write("<br>" + "-1" + " 정확하게 안담깁니다.")
+        // }
+
+        // document.write("<br>" + five + "개의 5개봉투가 필요")
+        // document.write(three + "개의 3개봉투가 필요")
+
+        function solution(n) {
+            let result;
+            let five = 0, three = 0
+
+            for (let i = parseInt(n / 5); i > 0; i--) {
+                if ((n - (5 * i) % 3) == 0) {
+                    five = i;
+                    three = (n - (5 * i)) / 3;
+                    result = five + three;
+                    break;
+
+                } else {
+                    result = -1;
+
+                }
+            }
+        }
+// 5개의 봉투를 최대로 사용가능한 갯수를 i의 초기값으로 하고 나머지를 3으로 나누어 떨어지는지 확인후
+// 나머지가 없으면 break 나머지가 있으면 i를 하나 낮춰서 다시 반복
+
+
+    </script>
+
+</head>
+
+<body>
+    <!-- 과제 1-100까지 수를 더하라 -->
+
+    <!-- 마스크 공장에 마스크를 담을수 있는 봉투가 3개입 5개입 두종류가있다.
+    최대한 적은 봉투를 사용하여 마스크를 담고자한다.
+    예를들어 18개의 마스크가 있다면 5개입x3 3개입x1
+    n개의 마스크를 담기위해서 최소한팩수를 구하는 공식을 만들라
+    정확하게 못담을경우 -1
+    -->
+</body>
+
+</html>

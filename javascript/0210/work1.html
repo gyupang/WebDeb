@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // 1. 화면에 출력되도록 1,2,의 코드를 완성
+
+        let phoneNum = "010-1234-5678";
+        let result_1 = phoneNum.substring(phoneNum.length-4, 0);
+        document.write(result_1, "****<br>");
+
+        let imgSrc = "images/bnt_out.jpg";
+        let result_2 = imgSrc.replace('out', 'over');
+        document.write(result_2, "<br>");
+
+        // 화면 출력 내용 : 010-1234-****, images/bnt_over.jpg
+
+
+        // 2. 배열객체와 수학객체를 이용해 코드를 작성
+        // 점심시간에 짜장면, 돈까스, 된장국, 김치찌개, 회덮밥 중
+        // 어떤메뉴로 선택할지 고민이 된다면 랜덤으로 선택하도록 하자
+
+        const lunch = ['짜장면', '돈까스', '된장국', '김치찌개', '회덮밥'];
+        let rand = Math.floor(Math.random() * lunch.length);
+        document.write(lunch[rand]);
+
+
+
+
+
+    </script>
+</body>
+
+</html>

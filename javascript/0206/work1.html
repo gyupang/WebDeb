@@ -1,0 +1,69 @@
+자바스크립트 데이터타입
+복습
+<!-- 기본타입 -->
+숫자 : number
+let intNum = 10;
+let foatNum = 10.0;
+
+문자열 : string
+let str = "문자열", '문자열'
+let str2 = "문자 '문자' 열"
+let cha = 'a'
+
+불린값 : boolean
+let boolVar = true
+
+undefined : undefined
+
+null : object
+
+
+
+<!-- 참조타입 -->
+배열
+console.log(abcde[0]) = a
+
+함수(function)
+function nFunction(x,y){
+console.log(x*y)}
+
+function nFunction(x,y){
+return(x*y)}
+
+
+let result = function(){
+return 5*10;}
+<!-- 화살표함수로 축약 -->
+let result=()=>{
+return 5*10;}
+
+
+정규표현식
+
+<!-- 객체리터럴 방식 -->
+let man = {
+lastName: "안",
+firstName : "철수",
+age:"30",
+gender:"남자",
+
+FullName:function(){
+return this.lastName + this.firstName
+}}
+
+<!-- car라는 객체를 만드로
+회사명 포르쉐, 자동차명 718, 승차인원 1명
+매소드 자동차가 출발합니다.
+-->
+
+<!-- 출력문 => 포르쉐 718 모델 자동차가 출발합니다 -->
+
+let car ={
+company: "포르쉐",
+carName: 718,
+seat: "1명",
+start:function(){
+    return ("자동차가 출발합니다.")
+}}
+
+let go = car.company + car.carName + car.start()

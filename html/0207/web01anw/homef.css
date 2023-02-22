@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: sans-serif;
+    color: black;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+
+}
+
+a:hover {
+    color: #000;
+    text-decoration: underline;
+
+
+}
+
+/* 레이아웃 크기 1200x */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    height: 100px;
+    background-color: #0006ad;
+    color: #fff;
+    text-align: right;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+header a {
+    color: #fff;
+    padding: 5px 15px;
+}
+
+header a:hover {
+    color: #fff;
+}
+
+.banner {
+    height: 300px;
+}
+
+main {
+    height: 200px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.col-4 {
+    width: 33.33%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+footer {
+    height: 100px;
+    background-color: #494949;
+    color: #fff;
+}
+
+
+/* 헤더 */
+
+.logo img {
+    height: 50px;
+    margin-top: 25px;
+    float: left
+}
+
+.banner {
+    background: url(../../img/banner.png) no-repeat left;
+    background-size: cover;
+    overflow: auto;
+}
+
+.banner h1 {
+    text-align: center;
+    font-size: 60px;
+    color: rgba(78, 54, 23, 0.8);
+    margin-top: 100px;
+    text-shadow: 0 0 15px rgb(206, 203, 44);
+}
+
+/* 메인 */
+
+main ul{
+padding: 0;
+padding-left: 15px;
+list-style-position: inside;
+/* 목록아이콘 안쪽으로 넣기 */
+
+}
+
+main li {
+    white-space: nowrap;
+    /* 줄바꿈 금지 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-bottom: 1px solid gray;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+main li:hover{
+    background-color: aquamarine;
+}
+
+.col-1{
+width: 33.3%;
+float: left;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+
+}
+
+
+/* 바닥 */
+
+.bot{
+    
+   text-align: center;
+}

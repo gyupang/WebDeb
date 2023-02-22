@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <script>
+// 문자열을 출력할때는 따옴표로 싸서 출력
+// 숫자는 그대로 출력
+// 변수도 그대로 출력
+var str = "이곳에 출력";
+
+document.write("문자열");
+document.write(10);
+document.write(str);
+</script> -->
+
+    <!-- <script>
+let strr = "자바는 역시";
+document.write("그가 말하길 "+strr + " 어렵습니다");
+</script> -->
+
+    <script>
+        // 자바스크립트의 산술 연산자
+        // + - * / %
+        // A+B, A-B, A*B, A/B, A%B (나머지값)
+
+        // 문1. 변수 num1=15; num2=2;
+        // 두 변수의 산술연산 결과를 result에 저장한 후 result를 출력
+        // 1. +  2. - 3. * 4. / 5. %
+
+        let num1 = 15;
+        let num2 = 2;
+        result1 = num1 + num2;
+        result2 = num1 - num2;
+        result3 = num1 * num2;
+        result4 = num1 % num2;
+
+        document.write(result1, " "); //17
+        document.write(result2, " "); //13
+        document.write(result3, " "); //30
+        document.write(result4, " "); //1
+
+        result = num1 / num2;
+        document.write(result, " "); //7.5
+
+        let num3 = 10;
+        let num4 = 3;
+        num3 += num4;
+        document.write(num3, " "); //13
+
+        num3 -= num4;
+        document.write(num3, " "); //10
+
+        num3 *= num4;
+        document.write(num3, " "); //30
+
+        num3 %= num4;
+        document.write(num3, " "); //0
+
+        let num5 = 10
+        result = ++num5 // 11 ** result = num5++ // 10 먼저 출력되고 ++ 계산
+        document.write(result, " ");
+
+        let numb1 = 10;
+        let numb2 = 20;
+        let resultt;
+
+        numb1--;
+        document.write(numb1, " "); //9
+
+        numb1++;
+        document.write(numb1, " "); //10
+
+        resultt = numb2++;
+        document.write(resultt, " ") //20
+        document.write(numb2, " ") //21
+
+        resultt = ++numb2;
+        document.write(resultt, " ") //22
+        document.write(numb2, " ") //22
+
+        let nu1 = 10, nu2 = "10";
+        nu1 == 10;
+        nu2 == 10;
+
+        document.write(nu1 == 10, " ") // true
+        document.write(nu2 == 10, " ") // true
+
+        let a = 10, b = 20, c = 10, f = "20";
+        document.write(a > b, a < b, a <= b, b == f, a != b, b === f);
+        //              f    t     t     t    t      f
+
+        let x = 10, y = 20, m = 30, n = 40;
+        let rs;
+        rs = x > y || y >= m || m > n;  // f||f||f  =>f
+
+        rs = x > y || y >= m || m < n;   // f||f||t  =>t
+        
+        rs1=x<=y&&y>=m&&m<=n //f
+        rs2=x<=y&&y<=m&&m<=n //t
+        rs3=!(x>y) //t
+        document.write(rs1,rs2,rs3)
+
+
+
+            let strn = "<h1>남으로 창을 내겠소</h1>";
+        strn += "<p>남(南)으로<br>창(窓)을 내겠소.</p>";
+        strn += "<p>밭이 한참갈이<br>괭이로 파고<br>호미론 김을 매지요.</p>";
+        strn += "<pre>가나다라마바상ㅁ날\n ㄴㄹ나나ㅏㄴㅁ나ㅏㄴㄹ</pre>"
+        // /n <br> 기능?
+        document.write(strn);
+    </script>
+
+    <p>
+        대입연산자 - 두가지의 변수가 계산되어야 한다
+        A=B
+        A+=B === A = A+B
+
+        산술연산자 - 두가지의 변수를 가져야 한다
+        증감연산자 - ++ -- 1씩 증가시키거나 감소시키는 연산자
+        ++num 과 num++ 값 다름
+
+        비교연산자
+        <!--
+        A>B , A<B
+        A>=B
+        A==B
+        A===B
+
+        A!=B
+        A!==B
+         -->
+        논리 연산자
+        &&, ||, !
+        true and true = true
+        true and false = false
+
+        연산자의 우선순위
+        1.()
+        2.단항연산자 : -- ++ !
+        3.산술연산자
+        4.비교연산자
+        5.논리연산자
+        6.대입연산자
+
+
+
+
+
+    </p>
+</body>
+
+</html>

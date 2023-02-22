@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #333;
+            background-color: yellow;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button>안보이게</button>
+    <div class="box">노랑박스</div>
+
+
+
+    <script>
+        // $(document).ready(function(){
+        // // jQuery용 자바스크립트
+
+        // });
+
+        $(function () {
+            // jQuery용 자바스크립트
+
+            // $(".box").click(function(){
+            //     $(this).hide();
+            $("button").click(function () {
+                $(".box").slideUp().toggle(1, function () {
+                    alert("토글 완성") // 콜백함수 Callback 결과값이 끝난후 실행
+                    // 함수안에 함수또넣음
+                });
+                // show(), hide(), toggle(), fadeIn(), fadeOut(),
+                // fadeToggle(), fadeTo(500,0.5), slideDown(), slideUp(), slideToggle()
+
+                // 애내매이션
+               $('선택자').animate({top:'200px'})
+
+
+
+            });
+
+        }); //jquery
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

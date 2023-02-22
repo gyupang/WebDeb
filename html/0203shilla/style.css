@@ -1,0 +1,373 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Gothic A1', sans-serif;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+
+
+
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+
+
+.col-4 {
+    width: 33.333%;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/*  float속성은 요소가 떠다니는 방법을 지정합니다.
+    float 아래에 있는 다음 요소를 원할 때 clear 속성을 사용
+    float과 clear를 일치시켜야 플롯아래로 유지
+    */
+
+/* 헤더부분 */
+
+header {
+    height: 90px;
+    background-color: #f1e3c4;
+    padding-bottom: 15px;
+}
+
+header a.left {
+    color: rgb(151, 123, 86);
+    text-decoration: none;
+    display: block;
+    float: left;
+    margin-top: 50px;
+    margin-right: 50px;
+    font-weight: 600;
+    /* 두께 안먹힘?? */
+}
+
+header a span.material-symbols-outlined {
+    font-size: 18px;
+    vertical-align: top;
+    margin-left: 15px;
+
+}
+
+.logo h1,
+.logo p {
+    margin: 0;
+
+}
+
+.logo h1 a {
+    color: #81725f;
+    text-decoration: none;
+}
+
+.logo h1 {
+    letter-spacing: 4px;
+    margin-top: 15px;
+
+}
+
+.logo p {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.right-top {
+    padding-top: 10px;
+    text-align: right;
+}
+
+.right-top a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    color: #81725f;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-right: 1px solid #d3c2ab;
+}
+
+.tabs {
+    float: right;
+    font-size: 14px;
+    font-weight: 300;
+    color: #81725f;
+    cursor: pointer;
+    line-height: 14px;
+    padding-left: 15px;
+    position: relative;
+
+}
+
+.tabs-on {
+    width: 100%;
+    background-color: #d3c2ab;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+.tabs-on p {
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d7c3a4;
+}
+
+
+.tabs-on ul {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+}
+
+.tabs-on ul li {
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+}
+
+.tabs-on ul li a {
+    text-align: left;
+    padding: 0;
+    color: #fff;
+}
+
+.tabs-on ul li a:hover {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.tabs:first-child {
+    padding-right: 15px;
+}
+
+.tab span {
+    vertical-align: middle;
+}
+
+.right-bottom {
+    height: 50px;
+    margin-top: 20px;
+
+}
+
+.right-bottom a {
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+    color: #81725f;
+    text-decoration: none;
+    float: right;
+    margin-left: 40px;
+
+}
+
+.right-bottom::after {
+    content: "";
+    display: none;
+    width: 100%;
+    height: 5px;
+    background: #666;
+    margin-top: 15px;
+
+}
+
+.right-bottom a:hover {
+    display: block;
+}
+
+
+/* ------HERO------ */
+
+.hero {
+    width: 100%;
+    height: 650px;
+    background: url(../img/1920.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.hero h2 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 30px;
+    color: #f1ecdf;
+    margin: 0;
+}
+
+.hero h2 small {
+    background-color: #dab47f;
+    color: rgb(66, 64, 64);
+    margin-left: 5x;
+    font-size: 16px;
+    padding: 3px 3px;
+}
+
+.hero h1 {
+    font-variant: small-caps;
+    font-family: 'Noto Serif KR', serif;
+    color: #fff;
+    font-size: 40px;
+    margin: 0;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    padding-top: 10px;
+    border-bottom: 1px solid #fff;
+}
+
+.hero p {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+button.btn-link {
+    background-color: transparent;
+    border: 8px solid #f1e3c4;
+    color: #666;
+    font-size: 25px;
+    font-weight: 600;
+
+
+
+}
+
+
+.col-60 {
+    width: 60%;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.col-40 {
+    width: 40%;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.pt-60 {
+    padding-top: 30%;
+}
+
+
+/* 하단 그림 배치 */
+.subtitle {
+    text-align: center;
+    margin-top: 100px;
+}
+
+
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+.rightcolumn {
+    float: left;
+    width: 25%;
+}
+
+.row1:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.img1 {
+    background: url(../img/mini1.jpg);
+    height: 360px;
+    background-size: cover;
+
+}
+
+.img2 {
+    background: url(../img/mini2.jpg);
+    height: 260px;
+    background-size: cover;
+    width: 50%;
+}
+
+.img3 {
+    background: url(../img/mini3.jpg);
+    height: 260px;
+    background-size: cover;
+    width: 50%;
+
+}
+
+.img4 {
+    background: url(../img/mini4.jpg);
+    height: 260px;
+    background-size: cover;
+}
+
+.img5 {
+    background: url(../img/mini5.jpg);
+    height: 360px;
+    background-size: cover;
+}
+
+.card {
+    padding: 10px;
+}
+
+/* 하단 그림 텍스트 */
+.text-block {
+    position: absolute;
+    bottom: 20px;
+}
+
+.card {
+    position: relative;
+}
+
+.card h2 {
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+}
+.card h1 {
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.card p{
+
+    color: white;
+    font-size: 13px;
+    font-weight: 300;
+
+}

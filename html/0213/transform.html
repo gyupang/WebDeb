@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+</head>
+<style>
+    .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        transition: width 1s ease 0.5s;
+        /* 목록 시간 속도곡선 딜레이 */
+    }
+    div:hover {
+  width: 300px;
+}
+    /* 이동옵션
+
+transform:translate(x축,y축) // 으로 이동
+transform:ratate() // ratateX(), ratateY(), ratateZ() 으로 회전
+transform:scale() // scale(2,2.5), scaleX(2), scaleY(2) 으로 배율
+transform:skew() // skewX(), skewY() 으로 기울임
+transform:matrix()  // matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())
+
+*/
+    /* 움직이는 과정
+transition          // 축약버전, 목록 시간 속도곡선 딜레이
+transition-delay     // 전환 딜레이
+transition-property  // 전환할 목록
+transition-duration  // 전환 효과 시간
+transition-timing-function // 전환효과 속도곡선
+*/
+</style>
+
+
+<body>
+
+    <div class="box"></div>
+
+
+</body>
+
+</html>

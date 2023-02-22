@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <form action="" method="get">
+        <label for="username">아이디</label>
+        <input type="text" name="unsername" value="" id="username"><br>
+        <label for="userpw">비밀번호</label>
+        <!-- 라벨 for는 input id랑 연결됨 -->
+        <input type="password" name="userpw" value="" id="userpw"><br>
+        <input type="email" value="" placeholder="@naver.com"><br>
+        <input type="tel" value="전화"><br>
+
+        <!-- 버튼 같은 기능 -->
+        <input type="submit" value="전송">
+        <button type="button">버튼</button>
+        <button type="reset">리셋</button>
+        <br>
+        <!-- textarea row, cols는 sylesheet width로 설정가능 -->
+        <textarea name="contents" rows="5" cols="30">밸류값</textarea>
+
+        <!-- 라벨로 둘러싸기 / 라벨에 아이디지정하기 둘다 가능 -->
+        <label>레이블로 둘러쌈<input type="checkbox" name="check" value="ok" checked></label>
+
+<div>
+<p>자신의 성격을 선택하세요</p>
+<ul>
+    <!-- 라디오 버튼 이름 같으면 하나만 체크가능 -->
+<li><label>포악 <input type="radio" name="성격" value="포악함" checked ></label></li>
+<li><label>게으름 <input type="radio" name="성격"  value="게으름" ></label></li>
+<li><label>비밀 <input type="radio" name="성격" value="비밀" ></label></li>
+</ul>
+</div>
+
+<div>
+<p>자신의 재산을 선택하세요</p>
+<div>
+<select name="select">
+<option value="10만원">10만원</option>
+<option value="100만원">100만원</option>
+<option value="1000만원">1000만원</option>
+</select>
+
+</div>
+
+</div>
+
+    </form>
+
+    input type:"button" 버튼 ,"reset" 리셋,"submit" 전송
+
+
+</body>
+
+</html>

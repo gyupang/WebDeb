@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regester form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <form method="get">
+        <div class="container">
+            <!-- 1. 컨테이너 박스 기본셋팅 -->
+
+            <ul>
+                <li><span class="check">이름</span>
+                    <input id="username" name="username" type="text" placeholder="이름" required>
+                </li>
+                <li><span class="check">성별</span>
+                    <label><input id="male" type="radio" name="gender" value="male" checked>남</label>
+                    <label><input id="female" type="radio" name="gender" value="female">여</label>
+                </li>
+                <li><span class="check">아이디</span>
+                    <input id="userId" name="userId" type="text" placeholder="아이디" required>
+                </li>
+                <li><span>전화번호</span>
+                    <select name="tel1">
+                        <option selected>02</option>
+                        <option>031</option>
+                        <option>032</option>
+                    </select> -
+                    <input type="tel" name="tel1" class="tel"> -
+                    <input type="tel" name="tel11" class="tel">
+
+                </li>
+                <li><span class="check">휴대폰번호</span>
+                    <select name="tel2">
+                        <option selected>010</option>
+                        <option>011</option>
+                        <option>012</option>
+                    </select>
+                    <input type="tel" name="tel2" class="tel" placeholder="7777"> -
+                    <input type="tel" name="tel22" class="tel" placeholder="7777">
+                </li>
+                <li><span class="check">이메일</span>
+                    <input type="email" name="mail1" class="email" placeholder="abcd"> @
+                    <input type="email" name="mail2" placeholder="naver.com">
+                    <select name="mail">
+                        <option value="" selected>직접 입력</option>
+                        <option>naver.com</option>
+                        <option>google.com</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+
+        <div class="btn-box">
+            <button type="reset" class="myButton">취소</button>
+            <button type="submit" class="myButton">전송</button>
+        </div>
+    </form>
+
+</body>
+
+</html>

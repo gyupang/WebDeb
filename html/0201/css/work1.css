@@ -1,0 +1,54 @@
+body {
+  font-size: 16px;
+  color: #333333;
+  font-weight: normal;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url(../images/imgpng.png);
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-size: contain;
+}
+
+h1 {
+  width: 200px;
+  height: 100px;
+  background-color: aquamarine;
+}
+
+.box {
+  width: 500px;
+  height: 400px;
+
+  overflow: auto;
+  /* 넘치는 속성 제어
+  visible- 기본. 상자 외부로 텍스트 넘어감
+  hidden- 오버플로가 잘리고 나머지 콘텐츠는 보이지 않습니다.
+  scroll- 오버플로가 잘리고 스크롤바가 추가되어 나머지 콘텐츠를 볼 수 있습니다.
+  auto- 넘어가는 경우에만 스크롤바를 추가합니다.
+  overflow-x: scroll;  x축만 스크롤
+
+    */
+  background: yellowgreen url(../images/imgpng.png) no-repeat right top;
+
+  /* 백그라운드 이미지 반복
+background-repeat: no-repeat;
+repeat, no-repeat, repeat-x -y
+백그라운드 배경 고정
+background-attachment: scroll, local, fixed;
+백그라운드 위치
+background-position: right bottom;
+*/
+
+  /* background에 대한 속기 속성
+배경색 : color
+배경 이미지 : url()
+배경 position : center;
+배경 크기 : 300px 100px;
+배경 반복 : repeat-y;
+배경 origin : padding-box; 배경 시작점
+배경 clip : text;       배경 차지 범위
+배경 고정속성 : fixed;
+*/
+
+
+}

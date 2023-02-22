@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    // let name = prompt("영문 이름은 무엇입니까?")
+    document.write(name.toUpperCase())
+
+    // let num = prompt("전화번호는 무엇입니까?")
+    let last =num.substr(-4, 4)
+    let nnum = num.replace(last,"****")
+    document.write(nnum)
+
+// 정답
+
+// const userTel=prompt("전화번호는?")
+document.write(userTel.substring(0,userTel.length-4)+"****")
+
+
+
+
+</script>
+
+<body>
+    <!-- 
+프롬프트 창으로 영문이름 물어보고 대문자로 출력
+
+전화번호를 물어본후 마지막 4자를 ****로 바꾸어 출력하라.
+
+
+-->
+
+
+
+</body>
+
+</html>

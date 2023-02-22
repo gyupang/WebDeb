@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 내장함수</title>
+
+
+
+</head>
+
+<body id="body">
+    <div>
+        <button onclick="changeColor()">배경화면 바꾸기</button>
+    </div>
+
+    <div>
+        JavaScript 내장함수
+
+        encodeURI()--decodeURI() :문자를 유니코드 값으로 인코딩
+        <!-- encodeURI("?query=값") // "?query=%EA%B0%01" -->
+        encodeURI()Component() : 영문 숫자 제외한 모든 것 인코딩
+        Number() : 문자를 숫자형 데이터로변경
+        ParseInt() : 정수형으로 변경
+        ParseFloat() : 실수형으로 변경
+        String() : 문자열 데이터로 반환
+        Boolean() : 논리형 데이터로 반환
+        <!-- Boolean(5) == true -->
+        isNaN() : is Not a Number 숫자가 아닌 문자가 포함되어있으면 True
+        <!-- isNaN("53") == false-->
+        <!-- isNaN("5-3") == true-->
+        eval() : 문자형 데이터를 따옴표가 없는 자바스크립트 코드로 처리
+        <!-- eval("15+3") == 20 -->
+    </div>
+    <div>
+        <!-- 문제
+1. 버튼을 클릭할 때마다 함수가 실행되어
+#ff0, #f6c, #fcf, #cf0, #39f 중 1개가 랜덤으로 선택되어 바탕화면 색상이 바뀌도록 하시오
+(클릭 할때마다 함수호출 Math.random() 과 배열의 length 이용)
+
+2. TestScore 객체 생성자에 대한 설명이다.
+    1)객체 생성자 함수를 만들어 두 학생 (chulsu, younghee) 의 객체를 생성하고
+    속성으로 이름, 국어 영어점수를 등록
+
+    2)getTestInfo() 메소드를 만들어 실행하면 이름, 국어 , 영어정보를 출력하도록 하세요
+    3)getAvg() 메소드를 만들어 실행하면 평균점수를 출력하도록 하세요
+    (new TestScore("철수,80,90");, document.write(), return )
+
+-->
+    </div>
+
+
+    <script>
+        const color = ["#ff0", "#f6c", "#fcf", "#cf0", "#39f"]
+
+
+        function changeColor() {
+            let count = Math.floor(Math.random() * color.length);
+            body.style.backgroundColor = color[count];
+            //문서객체.style.스타일속성(낙타표기법) = 새값 
+
+            console.log(count)
+        }
+
+
+        // const chulsu = new Object();
+        // chulsu.name = "김철수";
+        // chulsu.kor = "80";
+        // chulsu.eng = "90";
+
+
+        // const younghee = new Object();
+        // younghee.name = "이영희";
+        // younghee.kor = "60";
+        // younghee.eng = "70";
+
+        function TestScore(name, kor, eng) {
+            this.name = name;
+            this.kor = kor;
+            this.eng = eng;
+        }
+
+        const chulsu = new TestScore('철수', 90, 85);
+        const younghee = new TestScore('영희', 80, 95);
+
+        // getTestInfo=function()
+
+    </script>
+
+</body>
+
+</html>

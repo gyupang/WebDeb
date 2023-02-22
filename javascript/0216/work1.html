@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquerymin.js"></script>
+<style>
+    .container{
+width: 1200px;
+margin: 0 auto;
+    }
+ul{
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+}
+
+a.logo{
+    display: block;
+    width: 120px;
+    height: 50px;
+    font-size: 40px;
+    text-decoration: none;
+    color: #840404;
+    font-weight: bold;
+    float: left;
+margin-right: 200px;
+}
+
+nav>ul{
+list-style-type: none;
+padding: 0;
+margin: 0;
+display: flex;
+justify-content: space-between;
+font-size: 20px;
+font-weight: bold;
+
+
+}
+.navi>li{
+    position: relative;
+}
+
+.navi>li>a{
+color: #840404;
+text-decoration: none;
+
+}
+.sub1{
+    display: none;
+    position: absolute;
+    background-color: white;
+    z-index: 100;
+    width: 150px;
+}
+
+.banner{
+width: 100%;
+    height: 400px;
+    background-color: pink;
+    color: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner p{
+font-size: 70px;
+text-align: center;
+
+}
+
+</style>
+
+</head>
+
+<body>
+<div class="container">
+<nav>
+    <ul class="navi">
+    <li><a href="http://naver.com" class="logo">LOGO</a></li>
+    <li><a href="#">메뉴1</a>
+        <ul class="sub1">
+
+            <li><a href="#">서브1</a></li>
+            <li><a href="#">서브2</a></li>
+            <li><a href="#">서브3</a></li>
+            <li><a href="#">서브4</a></li>
+            
+            
+            </ul>
+    
+    
+    
+    
+    
+    </li>
+    <li><a href="#">메뉴2</a></li>
+    <li><a href="#">메뉴3</a></li>
+    <li><a href="#">메뉴4</a></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+
+</div>
+<div class="banner">
+<p>banner</p>
+</div>
+<section class="main1">
+<div class="container">
+
+<h1 class="title1"></h1>
+<form>
+<input type="text" id="username">
+<input type="password" id="userpass">
+<button type="submit">전송</button>
+<button type="reset">리셋</button>
+</form>
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<!-- <h1 id="p1">재미있는 jq</h1> -->
+
+
+
+
+    <script>
+$(document).ready(function(){
+$('.navi>li').hover(function(){
+$(this).find('.sub1').fadeToggle();
+
+
+
+});
+// mouseenter, mouseover 마우스 올릴때
+// mouseleave, mouseout 마우스 떠날때
+// hover 올릴때 떠날때
+// $(셀렉터)
+
+
+
+$('.title1').text('제목입니다');
+$('form').submit(function(event){
+event.preventDefault();
+if($('#username').val()==''){
+    alert('이름을 입력하세요');
+    return;
+}
+
+if($('#userpass').val()==''){
+    alert('비번을 입력하세요');
+    return;
+}
+
+$('form').submit();
+
+
+
+});
+// 공부
+
+$('.logo').click(function(e){
+e.preventDefault();
+// 로고 링크태그 막음
+let link = $('.logo').attr('href','http://google.com');
+//네이버에서 구글로 속성 바꿈
+alert(link)
+//attr로 속성 불러옴
+});
+
+
+
+});//jq
+
+
+// set - $(선택자).text();  
+// get - 변수 = $(선택자).text();
+
+// $(선택자)
+
+
+
+
+
+        $(document).ready(function () {
+$('#p1').click(function(){
+$(this).css('color','green').slideUp(2000).slideDown(2000);
+});
+
+        //  $('div').css('font-size','30px').css('color','blue').css('backgroud-color','yellow');
+        // css스타일 여러개 수정할때 1번
+
+        //2번 방법
+         /* $('div').css({
+            fonSize:'30px',
+            color:'blue',
+            backgroundColor:'yellow'
+            });
+*/
+            
+        }); //jq
+            /*
+                $(선택자).animate({키:값},시간,function(){
+            
+                }); 애니매이트
+            
+            $(선택자).css().animate()
+            여러개 체인링기법
+            */
+
+
+//
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

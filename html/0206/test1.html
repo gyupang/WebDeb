@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="syle.css">
+</head>
+
+<body>
+    <h1>기본정보</h1>
+    <form action="" method="get">
+        <label for="username">이름</label>
+        <input type="text" placeholder="이름" id="username" name="username">
+        <br>
+        <label for="gender">성별</label>
+        <label><input type="radio" id="gender" name="gender" value="man" checked>
+            남성</label>
+
+        <label><input type="radio" id="gender" name="gender" value="woman">
+            여성</label>
+        <br>
+        <label for="nick">아이디</label>
+        <input type="text" placeholder="아이디" id="nick" name="idd">
+        <br>
+        <label for="tel1">전화번호</label>
+            <select name="tel1">
+                <option selected>02</option>
+                <option>031</option>
+                <option>032</option>
+            </select>
+            <input type="tel" id="tel1" name="tel1"> -
+            <input type="tel" id="tel1" name="tel11">
+        
+        <br>
+        <label for="tel2">휴대폰번호</label>
+            <select name="tel2">
+                <option selected>010</option>
+                <option>011</option>
+                <option>012</option>
+            </select>
+            <input type="tel" id="tel2" name="tel2" placeholder="7777"> -
+            <input type="tel" id="tel2" name="tel22" placeholder="7777">
+        
+        <br>
+        <label for="mail">이메일</label>
+            <input type="email" id="mail" name="mail1" placeholder="abcd">
+            <input type="email" id="mail" name="mail2" placeholder="naver.com">
+            <select name="mail">
+                <option value="" selected>직접 입력</option>
+                <option>naver.com</option>
+                <option>google.com</option>
+            </select>
+        
+        <br>
+
+
+
+        <button type="submit">회원가입</button>
+
+
+
+    </form>
+
+
+
+
+</body>
+
+</html>

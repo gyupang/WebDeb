@@ -1,0 +1,7 @@
+alt shift F -코드정렬
+
+alt 위아래 - 행 위아래 이동
+alt shift 위아래 - 행위아래 복사
+alt ctrl 위아래 - 다중행선택하여 한번에 수정
+
+ctrl / - 한번에 주석처리

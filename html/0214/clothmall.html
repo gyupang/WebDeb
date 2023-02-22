@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX BOX</title>
+    <link rel="stylesheet" href="clothmall.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .card>img {
+            max-width: 100%
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+
+        .row {
+            display: flex;
+            flex-flow: row wrap;
+            margin-left: -15px;
+            margin-right: -15px;
+
+        }
+
+        .card {
+            position: relative;
+
+        }
+
+        .text-box {
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            left: 0;
+            bottom: -50%;
+            opacity: 0;
+            z-index: 2;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .card:hover>.text-box {
+            opacity: 1;
+            bottom: 0;
+
+        }
+
+        .right button {
+            margin-left: 20px;
+
+            /* 스타일시트 col3
+    col5
+    버튼누르면 col4대신 col3으로되게
+     */
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="right">
+            <button onclick="list(3)">3개씩 보기</button>
+            <button onclick="list(5)">5개씩 보기</button>
+
+
+        </div>
+
+
+        <div class="row">
+            <!-- loop -->
+            <div class="col-4">
+                <div class="card">
+                    <img src="../img/cloth1.gif" alt="">
+                    <div class="text-box">
+                        블라블라
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- loop -->
+            <!-- loop -->
+            <div class="col-4">
+                <div class="card">
+                    <img src="../img/cloth1.gif" alt="">
+                    <div class="text-box">
+                        블라블라
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- loop -->
+            <!-- loop -->
+            <div class="col-4">
+                <div class="card">
+                    <img src="../img/cloth1.gif" alt="">
+                    <div class="text-box">
+                        블라블라
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- loop -->
+            <!-- loop -->
+            <div class="col-4">
+                <div class="card">
+                    <img src="../img/cloth1.gif" alt="">
+                    <div class="text-box">
+                        블라블라
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- loop -->
+            <!-- loop -->
+            <div class="col-4">
+                <div class="card">
+                    <img src="../img/cloth1.gif" alt="">
+                    <div class="text-box">
+                        블라블라
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- loop -->
+            <!-- loop -->
+            <div class="col-4">
+                <div class="card">
+                    <img src="../img/cloth1.gif" alt="">
+                    <div class="text-box">
+                        블라블라
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- loop -->
+            <!-- loop -->
+            <div class="col-4">
+                <div class="card">
+                    <img src="../img/cloth1.gif" alt="">
+                    <div class="text-box">
+                        블라블라
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- loop -->
+            <!-- loop -->
+            <div class="col-4">
+                <div class="card">
+                    <img src="../img/cloth1.gif" alt="">
+                    <div class="text-box">
+                        블라블라
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- loop -->
+            <!-- loop -->
+            <div class="col-4">
+                <div class="card">
+                    <img src="../img/cloth1.gif" alt="">
+                    <div class="text-box">
+                        블라블라
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- loop -->
+            <!-- loop -->
+            <div class="col-4">
+                <div class="card">
+                    <img src="../img/cloth1.gif" alt="">
+                    <div class="text-box">
+                        블라블라
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- loop -->
+            <!-- loop -->
+            <div class="col-4">
+                <div class="card">
+                    <img src="../img/cloth1.gif" alt="">
+                    <div class="text-box">
+                        블라블라
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- loop -->
+            <!-- loop -->
+            <div class="col-4">
+                <div class="card">
+                    <img src="../img/cloth1.gif" alt="">
+                    <div class="text-box">
+                        블라블라
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- loop -->
+
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+// chatgpt 1
+// function list(i) {
+//       const cards = document.querySelectorAll('.col-4');
+//       if (i === 3) {
+//         cards.forEach(card => {
+//           card.classList.remove('col-4');
+//           card.classList.add('col-3');
+//         });
+//       } else if (i === 5) {
+//         cards.forEach(card => {
+//           card.classList.remove('col-4');
+//           card.classList.add('col-5');
+//         });
+//       }
+//     }
+
+//chatgpt 2
+function list(i) {
+      const cards = document.querySelectorAll('.col-4');
+      for (let j = 0; j < cards.length; j++) {
+        if (i === 3) {
+        //   cards[j].classList.remove('col-4');
+          cards[j].classList.toggle('col-3');
+        } else if (i === 5) {
+        //   cards[j].classList.remove('col-4');
+          cards[j].classList.toggle('col-5');
+        }
+      }
+    }
+
+
+
+        // function list(i) {
+           
+        //     if (i === 3) {
+        //         document.getElementsByClassName('col-4').classList.remove('col-4')
+        //         document.getElementsByClassName('col-4').classList.add('col-3')
+        //     } else if (i === 5){
+        //         document.getElementsByClassName('col-4').classList.remove('col-4')
+        //         document.getElementsByClassName('col-4').classList.add('col-5')
+
+        //     }
+
+        // }
+
+
+
+            // switch (e) {
+            //     case 1:
+            //         document.getElementsByClassName('box')[0].classList.add('animate__animated animate__backInUp');
+            //         break;
+            //     case 2:
+            //         document.getElementsByClassName('box')[1].classList.add('animate__swing');
+            //         break;
+
+            // }
+            // }
+            // classList.add("클래스이름") - 클래스추가
+            // classList.remove("클래스이름") - 클래스삭제
+            // classList.toggle("클래스이름") - 있으면 삭제 없으면 추가
+
+    </script>
+</body>
+
+</html>

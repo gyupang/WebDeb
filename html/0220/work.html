@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip</title>
+</head>
+<style>
+    body {
+        text-align: center;
+    }
+
+    .box {
+        height: 50px;
+
+    }
+
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dashed #333;
+    }
+
+    .tooltiptext1,
+    .tooltiptext2,
+    .tooltiptext3,
+    .tooltiptext4 {
+        width: 120px;
+        background: #000;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        visibility: hidden;
+    }
+
+    .tooltiptext1 {
+        bottom: 120%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .tooltiptext2 {
+        left: 100%;
+        /* transform: translateX(0%); */
+    }
+
+    .tooltiptext3 {
+        right: 100%;
+
+    }
+
+    .tooltiptext4 {
+        top: 120%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+    .tooltip:hover .tooltiptext1,
+    .tooltip:hover .tooltiptext2,
+    .tooltip:hover .tooltiptext3,
+    .tooltip:hover .tooltiptext4 {
+        visibility: visible;
+        display: inline-block;
+    }
+
+    .tooltiptext1::after,
+    .tooltiptext2::after,
+    .tooltiptext3::after,
+    .tooltiptext4::after {
+        content: "";
+        display: inline-block;
+        border-width: 10px;
+        border-style: solid;
+        top: 100%;
+        position: absolute;
+
+    }
+
+    .tooltiptext1::after {
+        border-color: #000 transparent transparent transparent;
+        left: calc(50% - 5px);
+    }
+
+    .tooltiptext2::after {
+        border-color: transparent #000 transparent transparent;
+        top: calc(25%);
+        left: calc(-12% - 5px);
+
+    }
+
+    .tooltiptext3::after {
+        border-color: transparent transparent transparent#000;
+        top: calc(25%);
+        right: calc(-11% - 5px);
+    }
+
+    .tooltiptext4::after {
+        border-color: transparent transparent #000 transparent;
+        top: calc(-50% - 5px);
+        left: calc(50% - 5px);
+
+    }
+</style>
+
+<body>
+    <div class="box"></div>
+    <div class="tooltip">
+        마우스 툴팁링크
+        <span class="tooltiptext1">툴팁1</span>
+        <span class="tooltiptext2">툴팁2</span>
+        <span class="tooltiptext3">툴팁3</span>
+        <span class="tooltiptext4">툴팁4</span>
+
+    </div>
+
+
+
+    <a href="#" title="네이버 바로가기">여기를 누르시오</a>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실시간 타임만들기</title>
+</head>
+
+<body>
+
+
+<script>
+
+//       let num =0;
+//       let endNum= 100;
+//       let auto = setInterval(function(){
+//         num++;
+//         document.write(num)
+//       },2000);
+        
+
+// let auto2=setInterval(function(){
+// endNum--;
+// document.write(endNum)
+// },2000)
+// setInterval(mytime,1000);
+
+// function mytime(){
+let dt = new Date();
+let hour = dt.getHours();     //시간
+let min = dt.getMinutes();  //분
+let sec = dt.getSeconds();   //초
+
+let nows = hour + "시" + min + "분" + sec + "초";
+
+document.getElementById("now").innerHTML = nows;
+// }
+</script>
+
+<p class="now">지금 시간은 <span id="now"> 00시 </span> 입니다</p>
+
+
+</body>
+
+</html>

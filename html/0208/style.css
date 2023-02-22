@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+a:hover {
+    font-weight: bold;
+    background-color: yellowgreen;
+}
+
+.banner:hover {
+    background-color: rebeccapurple;
+}
+
+.banner {
+    height: 400px;
+    background-color: palevioletred;
+    text-align: center;
+    font-size: 100px;
+    color: #ccc;
+    overflow: hidden;
+    /* 글자 넘치는거 hidden으로 숨김 */
+
+}
+
+.header {
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    padding-top: 30px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    /* 
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    위치지정 해줘야함
+  */
+    background-color: #fff;
+    /* sticky 내렸을때 배경색지정 */
+}
+
+.header::before {
+    content: "안녕안녕";
+}
+
+.header:hover::after {
+    display: block;
+
+}
+
+.header::after {
+    content: "잘가잘가";
+    display: inline;
+    width: 100px;
+    height: 5px;
+    background-color: goldenrod;
+    margin: auto;
+}
+
+
+
+
+section {
+    margin-bottom: 80px;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed #ccc;
+}
+
+section p:first-child {
+    background-color: aquamarine;
+}
+
+q:lang(no) {
+    quotes: "%%" "%%";
+    /* 인용구 쌍따옴표 수정 */
+
+}

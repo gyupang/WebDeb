@@ -1,0 +1,132 @@
+두가지 목적
+타임캡슐(시간 관리도구)
+차원관리도구
+
+
+입력 i
+입력종료 esc
+
+종료:q 저장없이종료
+:q! 저장없이 강제종료
+:wq 저장후 종료
+
+위로스크롤 k
+아래로 스크롤 j
+
+<!-- 
+git config --global user.name "이름"
+git config --global user.email "이메일"
+
+git config --global color.ui.auto 커맨드라인 색상 설정
+git config --list 사용자 설정 정보 확인
+
+
+git init 깃폴더만듬
+git status 깃 상태확인
+git add . 파일모두 등록
+git commit -m 메세지 커밋
+git log 커밋상태
+git log -[숫자] 갯수만큼만 상태 출력
+git log --oneline 한줄로 출력
+git log --graph 그래프로 출력
+ -->
+
+
+<!-- 0206 -->
+
+작업공간 시작
+clone: 저장소를 복제 해 새 디텍러티로 가져옵니다.
+init: 빈 깃 저장소를 만들거나 기존 저장소를 다시 초기화
+
+변경사항 작업
+add : 파일 내용을 인덱스에 추가
+mv : 파일, 디렉터리, 실볼릭 링크를 옮기거나 이름을 바꿈
+restore :Restore working tree files
+rm : 파일을 작업폴더에서 제거하고 인덱스에서도 제거
+
+커밋 내역과 상태보기
+bisect: 이진 탐색으로 버그를 만들어낸 커밋을 찾는다
+diff: 커밋과 커밋사이, 커밋과 작업내용 사이등의 바뀐점을 본다
+grep: 패턴과 일치하는 줄을 표시
+log: 커밋기록을 표시
+show: 여러가지 오브젝트를 표시
+status: 작업폴더 상태를 표시
+
+커밋 내역을 키우고 표시하고 조작하기
+branch: 브랜치를 만듬,삭제 목록 출력
+commit: 바뀐 사항을 저장소에 기록
+merge: 여러개의 개발 내역을 하나로 합침
+reset: 현재 head를 지정한 상태로 재설정
+
+<!--  -->
+pwd: 현재 위치
+ls(dir): 목록보기
+ls -a: 숨김파일 표시
+ls -l: 파일이나 디렉터리의 상세정보 표시
+ls -r: 파일 정렬 반대로
+ls -t: 작성 시간순으로
+
+cd:  /절대경로 제일 처음 ./현재 디렉토리 ../이전 디렉토리
+~: 현재 접속중인 디렉토리
+cd ~: 접속한 디렉토리로 돌아감
+
+mkdir "폴더명" : 폴더만들기
+rm -r "폴더명" : 폴더와 하위디렉토리 모두 삭제
+clear: 터미널정리
+exit: 터미널 종료
+
+<!--  -->
+vim
+i:입력모드 esc:명령모드
+:w : 편집하던 문서 저장
+:q : 저장없이종료
+:q! : 저장없이 강제종료
+:wq : 저장후 종료
+:wq : "파일명" 저장
+
+<!-- concatenate -->
+cat "파일명": 파일내용확인
+cat "파일명">"파일명2" : 파일명2로 복제
+cat "파일명">>"파일명2": 파일명2로 합침
+
+<!--  -->
+reset : 원하는 시점으로 돌아감(이후 내역 삭제)
+git reset --hard "커밋해시"
+git reset --hard : .git 관리상태랑 동기화
+
+revert : 원하는 시점을 가져와서 새로 커밋함
+
+
+<!-- 브랜치 -->
+git branch : 브랜치 확인
+git branch -m 원래이름 바꿀이름 : 브랜치 이름 변경
+
+git branch 이름 : 브랜치 생성
+git switch 브랜치이름 : 브랜치 이동
+git switch -c 브랜치이름 : 브랜치 이동과 동시에 생성
+git branch -d 브랜치이름 : 브랜치 삭제
+git branch -D 브랜치이름 : 브랜치 강제삭제
+        (다른브랜치로 가져오지 않은 내용이 있으면 강제삭제 해야함)
+
+<!-- 브랜치 합치는방법 -->
+
+git merge 브랜치이름 : 두브랜치를 한 커밋으로 이어 붙임 (브랜치의 사용내역을 남길 필요가 있을때)
+                        충돌시 : 조건중 하나 선택 -master? user? both?
+git add . => git commit(자동으로 merge branch 브랜치 이름) = 병합 완료
+만약에 충돌을 해결하기 힘들어 merge에서 나오려면
+git merge --abort
+
+rebase : 브랜치를 다른 브랜치에 이어 붙임(한줄로 깔끔하게 정리된 내역을 유지할때)
+        이미 팀원들과 공유된 커밋들에 대해서는 사용하지 않는것이 좋다
+        
+        switch로 해당브랜치로 이동후 rabase master 해줌
+        
+<!-- GIT 명령어 -->
+git push : 저장소에 commit 반영
+git pull : 저장소에서 commit 가져오기
+git clone [url] : 깃 repository 가져오기
+git diff : stage 안된 변경 비교
+git diff --stage : stage 상태 (commit 안됨)의 변경 비교
+git reset : staged 상태파일을 unstage로 변경
+git reset -hard [commit] : 특정 커밋 시점으로 덮어쓰기
+git reset -hard HEAD^ : 이전 HEAD 시점으로 초기화

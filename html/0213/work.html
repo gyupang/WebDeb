@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고급 CSS</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+        }
+
+        .box1 {
+            background-color: green;
+            border-radius: 50%;
+            max-width: 100%;
+        }
+
+        .box2 {
+            background-color: blue;
+            border-radius: 0 0 25px 0;
+        }
+
+        .box3 {
+            background-image: conic-gradient(red, yellow, orange);
+        }
+
+        .box4 {
+            background: linear-gradient(to bottom right, #ffffff 5%, #ff66cc 90%);
+        }
+
+        #lego {
+            width: 200px;
+            border-radius: 50%;
+
+        }
+
+        .border {
+            width: 200px;
+            height: 200px;
+            border: 3px solid black;
+            border-radius: 10px 50px;
+            box-sizing: border-box;      
+            /* 패딩 크기 상자크기 조절하는법 */
+            padding: 15px;
+            font-size: 0.7em;
+
+           
+        }
+     
+
+        body {
+            background-image: url(../img/Untitled-1.png), url(../img/Untitled-5.png);
+            background-position: right top, center;
+            background-repeat: no-repeat, no-repeat;
+        }
+
+        .grbanner {
+            height: 450px;
+            background-image: linear-gradient(30deg, red, yellow, green, blue);
+            /* 그라데이션 칼라넣기 colors_gradient
+to left/right/top/bottom - 그라데이션 방향
+숫자deg - 그라데이션 각도
+*/
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="box box1">
+        <!-- <img src="../img/LEGO.png" alt="lego"> -->
+    </div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+
+    <img id="lego" src="../img/LEGO.png" alt="lego">
+
+    <div class="grbanner"></div>
+
+    <div class="border">
+        <p>법률은 특별한 규정이 없는 한 공포한 날로부터 20일을 경과함으로써 효력을 발생한다. 재의의 요구가 있을 때에는 국회는 재의에 붙이고, 재적의원과반수의 출석과 출석의원 3분의 2 이상의 찬성으로
+            전과 같은 의결을 하면 그 법률안은 법률로서 확정된다. 군사에 관한 것도 또한 같다.</p>
+
+        
+    </div>
+
+</body>
+
+</html>

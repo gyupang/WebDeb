@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquerymin.js"></script>
+    <style>
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+
+        }
+
+        .main img {
+            width: 500px;
+            height: 500px;
+        }
+
+        .sub img {
+            width: 150px;
+            margin-left: 200px;
+            float: left;
+
+        }
+    </style>
+
+
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="main">
+            <img class="img0" src="../img/melong.png" alt="0">
+        </div>
+
+        <div class="sub">
+            <div><img class="img1" src="../img/apeach.png" alt="1"> </div>
+            <div><img class="img2" src="../img/melong.png" alt="2"> </div>
+            <div><img class="img3" src="../img/nomelong.png" alt="3"> </div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('.img1').click(function () {
+                $('.img0').attr('src', '../img/apeach.png');
+
+            });
+
+            $('.img2').click(function () {
+                $('.img0').attr('src', '../img/melong.png');
+
+            });
+
+            $('.img3').click(function () {
+                $('.img0').attr('src', '../img/nomelong.png');
+
+            });
+
+        }); //jq
+
+
+    </script>
+
+</body>
+
+</html>

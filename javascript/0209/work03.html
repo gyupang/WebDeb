@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events</title>
+</head>
+
+<body>
+
+    <p id="block"></p>
+    <button type="button" onclick="myEvent()">누르시오</button>
+
+    <script>
+        // 요소 이벤트명="스크립트"
+
+        function myEvent() {
+            // document.write("누름?")
+            document.getElementById("block").innerHTML = "누르셨군요";
+            // 함수가 실행되면 block 안에 누르셨군요 입력됨.
+        }
+        function myOpen()
+        window.open('work02.html', 'width=400', 'height=400', 'left=100', 'top=100')
+
+
+        
+    </script>
+
+    <!-- p id="demo"
+버튼을 누르면 id demo 인 요소에 날짜출력
+
+-->
+    <p id="demo"></p>
+    <button type="button" onclick="document.getElementById('demo').innerHTML=Date()">누르시오</button>
+
+    <button type="button" onclick="this.innerHTML=Date()">바로 날짜</button>
+
+    <!-- 주로쓰는 HTML Event 이벤트 -->
+    onclick
+    onmouseover
+    onmouseout
+    blur
+    focus
+    keydown
+    keyup
+    keypress
+
+    <!-- 객체 메서드의 종류 -->
+    open("url","새창이름","새창옵션(크기)") - url 페이지를 새창에서 연다
+        새창옵션 - width height left top// scrollbars, location 주소창, status 상태창, toolbars 도구상자영역
+                (기본적으로 새창 차단)
+    alert(data),prompt(질문),comfirm(질문) - 질의 응답등을 경고창으로 나타냄
+    moveTo(x,y) - 지정한 새창의 위치를 이동
+    resizeTo(width,height) - 지정한 새창의 크기를 변경
+    setInterval(function(){코드},시간) - 일정한 시간간격으로 계속 함수 호출
+    clearTimeout() - 함수의 실행을 중지
+
+    setTimeout(function(){코드},시간) - 지정된 시간(밀리초)을 기다린 후 함수를 실행
+
+    close();
+    window.close(); 윈도우창 닫음
+
+    <!-- 페이지를 새창으로 열고 새창에 닫기 버튼을 넣어 닫아보세요 -->
+<p>새창 테스트</p>
+    <button type="button" onclick="window.open('newtab.html','width=400','height=400')">새창열기</button>
+
+</body>
+
+</html>

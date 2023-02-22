@@ -1,0 +1,30 @@
+usersec.xml
+
+# 주석처리
+# 파일.확장자(같은 이름의 모든파일) 이그노어
+# 최상위 폴더의 파일.확장자  /file.js
+
+# js확장자를 가진 모든파일  *.js
+
+# 위의 제외한 모든 확장자에 속하지만 무시하면 안될 경우
+#  !file.js  관리대상 포함
+
+
+# logs 란 이름의 폴더(안의 내용 포함), 파일
+#  logs
+
+# logs 란 이름의 폴더만(안의 내용포함)
+#  logs/
+
+# logs 폴더안의 폴더들에 ag.js를 예외
+# logs/**/ag.js
+
+
+# git add .
+# git commit -m "수정내용"
+
+# git commit -am (add + commit + 메세지등록) //단 새로 추가되는 파일이 없을때
+
+# 1.efg에 멤버 한명 추가한후 커밋 "add efg to members"
+# 2.fgh.jason 추가, 내용은 알아서 "add group fgh"
+# 3.efg 삭제, bcd master를 james로 교체, ghi.json 추가 내용은 알아서 "Replace efg, bcd mod, ghi add"

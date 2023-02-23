@@ -7,70 +7,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boot Strap navbar</title>
     <link rel="stylesheet" href="../../boot/css/bootstrap.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/boot2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+
     <script src="../../javascript/jquerymin.js"></script>
     <script src="../../boot/js/popper.min.js"></script>
     <script src="../../boot/js/bootstrap.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
 
 
 
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-dark bg-dark fixed-top navbar-expand-md">
-            <a href="#" class="navbar-brand">MY WEB</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-dark bg-primary navbar-expand-md">
+                <a href="#" class="navbar-brand">MY WEB</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="navbar">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active ml-lg-5 mr-lg-3"><a href="#" class="nav-link">OFFICE</a></li>
-                    <li class="nav-item mx-lg-3"><a href="#" class="nav-link">GALLERY</a></li>
-                    <li class="nav-item mx-lg-3"><a href="#" class="nav-link">CONTACT</a></li>
-                </ul>
-                <form class="form-inline">
-                    <input type="text" class="form-conntrol mr-sm-2" placeholder="Search">
-                    <button class="btn btn-outline-success">SEARCH</button>
-                </form>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active ml-lg-5 mr-lg-3"><a href="#" class="nav-link">OFFICE</a></li>
+                        <li class="nav-item mx-lg-3"><a href="#" class="nav-link">GALLERY</a></li>
+                        <li class="nav-item mx-lg-3"><a href="#" class="nav-link">CONTACT</a></li>
+                    </ul>
+                    <form class="form-inline">
+                        <input type="text" class="form-conntrol mr-sm-2" placeholder="Search">
+                        <button class="btn btn-outline-success">SEARCH</button>
+                    </form>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!-- 슬릭 슬라이드 -->
+            <!-- /https://kenwheeler.github.io/slick/ -->
+            <div class="slick-slider">
+                <div>
+                    <img src="https://picsum.photos/600/500?random=1" alt="#">
+                </div>
+                <div>
+                    <img src="https://picsum.photos/600/500?random=2" alt="#">
+                </div>
+                <div>
+                    <img src="https://picsum.photos/600/500?random=3" alt="#">
+                </div>
+                <div>
+                    <img src="https://picsum.photos/600/500?random=4" alt="#">
+                </div>
+                <div>
+                    <img src="https://picsum.photos/600/500?random=5" alt="#">
+                </div>
+
+
             </div>
-        </nav>
-    </header>
-
-    <main>
-        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3500">
-            <!-- indicators -->
-            <ul class="carousel-indicators">
-                <li data-target="#myCarousel" data-slides-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slides-to="1"></li>
-                <li data-target="#myCarousel" data-slides-to="2"></li>
-                <li data-target="#myCarousel" data-slides-to="3"></li>
-            </ul>
-            <div class="carousel-inner">
-                <div class="carousel-item active"><img src="https://picsum.photos/2000/300?random=1" alt="1"></div>
-                <div class="carousel-item"><img src="https://picsum.photos/2000/300?random=2" alt="2"></div>
-                <div class="carousel-item"><img src="https://picsum.photos/2000/300?random=3" alt="3"></div>
-                <div class="carousel-item"><img src="https://picsum.photos/2000/300?random=4" alt="3"></div>
+            <!-- Arrow 버튼  -->
+            <div class="indicator">
+                <div class="prevArrow"><i class="fa-regular fa-circle-left"></i></div>
+                <div class="nextArrow"><i class="fa-regular fa-circle-right"></i></div>
             </div>
-            <a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">
-                <div class="carousel-control-prev-icon" aria-hidden="true"></div>
-                <span class="sr-only">이전</span>
-            </a>
-            <a href="#myCarousel" class="carousel-control-next" role="button" data-slide="next">
-                <div class="carousel-control-next-icon" aria-hidden="true"></div>
-                <span class="sr-only">이전</span>
-            </a>
-
-<!-- 이대로 만들어보기 숙제 -->
-<!-- 네브바 캐러셀 -->
 
 
-        </div>
+            <div class="container">
+                <h1 class="text-center my-5">First Nav</h1>
+                <p class="pb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos alias asperiores
+                    laudantium minus quisquam iste, architecto iusto eum impedit a nihil repellendus harum porro aut
+                    molestiae expedita vero odio inventore?</p>
+                <div class="row">
+                    <div class="col-md-4 col-12 mt-5 text-center">
+                        <img class="rounded-circle" src="https://picsum.photos/150/150?random=6" alt="#">
+                        <h2 class="my-3">그림1</h2>
+                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit totam
+                            repellendus</p>
+                        <a href="#" class="btn btn-secondary">자세히 보기</a>
+                    </div>
+
+                    <div class="col-md-4 col-12 mt-5 text-center">
+                        <img class="rounded-circle" src="https://picsum.photos/150/150?random=7" alt="#">
+                        <h2 class="my-3">그림1</h2>
+                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit totam
+                            repellendus</p>
+                        <a href="#" class="btn btn-secondary">자세히 보기</a>
+
+                    </div>
 
 
-    </main>
 
+                    <div class="col-md-4 col-12 mt-5 text-center">
+                        <img class="rounded-circle" src="https://picsum.photos/150/150?random=8" alt="#">
+                        <h2 class="my-3">그림1</h2>
+                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit totam
+                            repellendus</p>
+                        <a href="#" class="btn btn-secondary">자세히 보기</a>
+
+                    </div>
+                </div>
+                <hr class="my-5">
+                <div class="row">
+                    <div class="col-md-8 col-12">
+                        <h1 class="pb-3">제목1</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores saepe nostrum,
+                            voluptates nesciunt expedita quia, ab, qui ipsa laborum aut aliquam? Nam aut tempore
+                            dolorum. Tenetur fugit totam veniam quis?</p>
+                    </div>
+
+                    <div class="col-md-4 col-12">
+                        <img class="img-thumbnail" src="https://picsum.photos/800/600?random=9" alt="#">
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </main>
+        <footer class="bg-secondary text-white">
+            <div class="container text-center py-5 mt-5">
+                Copyright &copy; Gyu all right reserved.
+
+
+            </div>
+        </footer>
+    </div>
 
 
 

@@ -1,1 +1,0 @@
-<p class="box">WELCOME AJAX WORLD!</p>

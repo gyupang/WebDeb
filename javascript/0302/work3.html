@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS로 탭만들기</title>
+
+    <style>
+        .tab {
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            overflow: hidden;
+            /* float하면 오버플로우? */
+        }
+
+        .tab a {
+            float: left;
+            display: block;
+            text-decoration: none;
+            color: #000;
+            font-size: 20px;
+            line-height: 40px;
+            padding: 10px 20px;
+            transition: all 300ms;
+        }
+
+        .tab a:hover,
+        .tab a.active {
+            background-color: #ddd;
+        }
+
+        .tabcontents {
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-top: none;
+            display: none;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="tab">
+        <a href="javascript:void(0)" class="tablink" onclick="openCity(event,'london')">런던</a>
+        <!-- jquery elmentdefault 기능 -->
+        <a href="javascript:void(0)" class="tablink" onclick="openCity(event,'paris')">파리</a>
+        <a href="javascript:void(0)" class="tablink" onclick="openCity(event,'seoul')">서울</a>
+    </div>
+    <div id="london" class="tabcontents">
+        <h1>london</h1>
+        <p>영국의 수도 런던</p>
+    </div>
+    <div id="paris" class="tabcontents">
+        <h1>paris</h1>
+        <p>프랑스의 수도 파리</p>
+    </div>
+    <div id="seoul" class="tabcontents">
+        <h1>seoul</h1>
+        <p>대한민국의 수도 서울</p>
+    </div>
+    <script>
+        function openCity(e, cityName) {
+            let i, tabcontents, tablink;
+            tablink = document.getElementsByClassName('tablink')[0];
+            for (i = 0; i < tablink.length; i++) {
+                tablink[i].className = tablink[i].classList.remove('active');
+                // tablink[i].className=tablink[i].className.replace('active','');
+                // 예전 버전 함수
+
+            }
+            tabcontents = document.getElementsByClassName('tabcontents');
+            for (i = 0; i < tabcontents.length; i++) {
+                tabcontents[i].style.display = 'none';
+            }
+            document.getElementById(cityName).style.display = 'block';
+            // e.currentTarget.classList.toggle('active')
+            // e.currentTarget.className += ' active'
+            // 예전 버전 함수
+
+            // document.getElementById('default').click(); 
+
+        }
+        // let i = tabcontents
+    </script>
+
+</body>
+
+</html>

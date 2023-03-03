@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0303 문제해설</title>
+
+
+
+</head>
+
+<body>
+
+    <script>
+        //1
+        // let year = prompt("년도를 입력하세요:");
+        // let result = isLeapYear(year);
+        // console.log(result);
+
+        function isLeapYear(year) {
+            if (year % 100 === 0) {
+                if (year % 400 === 0) {
+                    return "윤년";
+                } else {
+                    return "평년";
+                }
+            } else {
+                if (year % 4 === 0) {
+                    return "윤년";
+                } else {
+                    return "평년";
+                }
+            }
+        }
+
+        //1-2번째방법
+        function leapyear(year) {
+            return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
+
+        }
+        console.log(leapyear(2026))
+
+
+        //2
+        const startYear = 2023;
+        const endYear = 2100;
+
+        for (let year = startYear; year <= endYear; year++) {
+            if (new Date(year, 0, 1).getDay() === 0) {
+                console.log(`${year}년 1월 1일은 일요일입니다.`);
+            }
+        }
+
+        // for (let y = 2023; y <= 2100; y++) {
+        //     let dt = new Date(y, 0, 1);
+        //     if (dt.getDay() === 0){
+        //         console.log(' 1월1일 일요일 '+y)
+        //     }
+
+        // }
+
+
+        //3
+
+        // const num = Math.ceil(Math.random()*10);
+        // console.log(num);
+
+        // const ynum =prompt('1-10까지 숫자를 입력하시오')
+        // if(ynum == num){
+        //     document.write('맞춤')
+        // }else{
+        //     document.write('땡 숫자는 ' + num)
+        // }
+
+        const num = Math.ceil(Math.random() * 10);
+        console.log(num);
+        //3-1
+        const ynum = prompt("1에서 10 사이의 숫자를 입력하세요.");
+        if (ynum === null) {
+            // 취소 버튼을 누른 경우
+            alert("취소하셨습니다.");
+        } else if (isNaN(ynum) || ynum < 1 || ynum > 10) {
+            // 잘못된 값을 입력한 경우
+            alert("1에서 10 사이의 숫자를 입력해주세요.");
+        } else if (parseInt(ynum, 10) === num) {
+            // 맞춘 경우
+            // 입력된 문자열을 parseInt() 함수를 사용하여 숫자로 변환한 뒤
+            //비교 연산자 ===를 사용하여 정확한 비교를 함.
+            alert("맞았습니다!");
+        } else {
+            // 틀린 경우
+            alert(`틀렸습니다. 숫자는 ${num}입니다.`);
+        }
+
+        //3-2
+
+        // let num = Math.ceil(Math.random() * 10);
+        // console.log(num);
+
+        // while (true) {
+        //     const ynum = prompt("1에서 10 사이의 숫자를 입력하세요.");
+        //     if (ynum === null) {
+        //         alert("취소하셨습니다.");
+        //         break;
+        //     } else if (isNaN(ynum) || ynum < 1 || ynum > 10) {
+        //         alert("1에서 10 사이의 숫자를 입력해주세요.");
+        //         continue;
+        //     } else if (parseInt(ynum, 10) === num) {
+        //         alert("맞았습니다!");
+        //         break;
+        //     } else {
+        //         alert("틀렸습니다. 다시 시도해보세요.");
+        //     }
+        // }
+        //         while 문을 사용하여, 맞출 때까지 계속해서 숫자를 입력받도록 함.
+        // break 문을 사용하여, 사용자가 취소 버튼을 누르거나 맞춘 경우에는 반복문을 종료함.
+        // continue 문을 사용하여, 잘못된 값을 입력한 경우에는 다시 입력을 받도록 함.
+
+
+
+
+        //4
+        // 유닉스타임 *1000 을하면됨
+        const today = new Date();
+        const grday = new Date(today.getFullYear(), 6, 10);
+        if (today.getMonth() === 6 && today.getDate() > 10) {
+            console.log("이미 수료했습니다.")
+        }
+        const oneDay = 24 * 60 * 60 * 1000;
+        const endDay = Math.ceil((grday.getTime() - today.getTime()) / oneDay);
+        console.log('남은시간은 ' + endDay);
+
+        //5
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭만들기</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    a {
+        text-decoration: none;
+        color: #555555;
+    }
+
+    .tab {
+        display: block;
+        overflow: hidden;
+        /* 체크 */
+        background-color: #dddddd;
+    }
+
+    .tab div {
+        float: left;
+        /* display: inline-block; */
+        height: 40px;
+        width: 100px;
+        border-top: 1px solid #999999;
+        border-bottom: 1px solid #999999;
+        border-left: 1px solid #999999;
+        text-align: center;
+        line-height: 40px;
+
+    }
+
+    .tab .seoul {
+        border-right: 1px solid #999999;
+    }
+
+    .tab div:hover {
+        background-color: #ddd;
+    }
+
+    .london {
+        background-color: peachpuff;
+    }
+
+    .paris {
+        background-color: lightskyblue;
+    }
+
+    .seoul {
+        background-color: orange;
+    }
+
+
+    .contents div {
+        display: none;
+        height: 500px;
+        border: 1px solid #999999;
+        border-top: none;
+    }
+
+    .contents div:first-child {
+        display: block;
+    }
+</style>
+
+<body>
+
+    <div class="tab">
+        <div class="london"><a href="javascript:void(0)" class="tablink" onclick="tabPage(event,'london')"
+                class="tablink">런던</a></div>
+        <div class="paris"><a href="javascript:void(0)" class="tablink" onclick="tabPage(event,'paris')"
+                class="tablink">파리</a></div>
+        <div class="seoul"><a href="javascript:void(0)" class="tablink" onclick="tabPage(event,'seoul')"
+                class="tablink">서울</a></div>
+
+
+    </div>
+    <div class="contents">
+        <div class="london" class="tabcontents">런던</div>
+        <div class="paris" class="tabcontents">파리</div>
+        <div class="seoul" class="tabcontents">서울</div>
+    </div>
+
+
+    <script>
+        function tabPage(pageName,el,color) {
+            let i, tabcontents, tablink;
+            tabcontents = document.getElementsByClassName('tabcontents');
+            tablink = document.getElementsByClassName('tablink');
+            for (i = 0; i < tablink.length; i++) {
+                tablink[i].className = tablink[i].classList.remove('active');
+
+
+            }
+            for (i = 0; i < tabcontents.length; i++) {
+                tabcontents[i].style.display = 'none';
+            }
+            document.getElementById(cityName).style.display = 'block';
+            // e.currentTarget.classList.toggle('active')
+            // e.currentTarget.className += ' active'
+            // 예전 버전 함수
+
+            // document.getElementById('default').click(); 
+
+        }
+        // let i = tabcontents
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

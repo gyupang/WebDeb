@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    1. 윤년인지 아닌지 판별하는 코드 그레고리력
+
+    2. 2023부터 2100 사이에 1월 1일이 일요일이 되는 해를 모두 출력
+
+    3. 컴퓨터가 선택한 1-10까지의 수중 하나의 정수를 사용자가 알아 맞추는 코드
+    <!-- 사용자는 prompt를 이용하여 입력, 숫자x 10넘어가는경우 에러 -->
+
+    4. 7월 10일은 수업종료일. 7월 10일까지 남은날짜를 계산하는 코드
+
+    5. 위사진과 같이 곱셈 또는 나눗셈을 출력하는 html과 스크립트 코드
+
+
+
+    <script>
+        //1번
+
+
+
+        //2 번
+        const dt = new Date();
+        let i = 2023;
+        while (i < 2101) {
+            i++
+        }
+
+        let ff = new Date(i, 1, 1)
+        const week = ["일", "월", "화", "수", "목", "금", "토"]
+        console.log(dt)
+        console.log(ff)
+
+        let fd = ff.getDay();
+        if (fd == 0) {
+            console.log(ff)
+
+        }
+
+        console.log(fd)
+
+        // if (ff) {
+
+        // }
+
+
+
+
+        //3번
+
+
+
+        // let r = Math.floor(Math.random() * 11)
+        // let ans = prompt('1-10까지 찍으세요?')
+        // if (ans > 10 && ans != Number) {
+        //     prompt('1-10까지 찍으세요2?');
+
+
+
+        // }
+
+
+        // if (ans == r) {
+        //     alert('맞았습니다')
+        // } else {
+        //     prompt('다시 맞추세요')
+        // }
+
+        // console.log(r)
+
+        // 4번 
+        const now = new Date();
+
+        const tday = new Date();
+        const dday = tday.setFullYear(2023, 06, 10)
+        let dd = tday - now
+        let last = dd / 86400000
+
+        // console.log(now)
+        // console.log(tday)
+        console.log(last + '일 남았습니다')
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

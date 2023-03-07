@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function removeScript(word) {
+            if (word.substring(4).includes("Script")) {
+                // 5번째부터 Script가있으면 true
+                return word.replace("Script", "");
+            } else {
+                return word;
+            }
+        }
+        console.log(removeScript('jjjs3ssSript'));
+
+    </script>
+
+</body>
+
+</html>

@@ -13,7 +13,7 @@
 
         예) thon ==> Python , Python ==> Python</p>
 
-    <p>2. 단어의 위치를 지정하면 그 위치에 문자를 제거하고 출력시키시오.
+    <p>2. 단어의 위치를 숫자로 지정하면 그 위치에 문자를 제거하고 출력시키시오.
 
         예) Python 의 3번 ==> Pyton</p>
 
@@ -21,7 +21,7 @@
 
         예) Swift ===> twifS</p>
 
-    <p>4. 단어의 첫 번째 문제를 받아 단어의 첫 번째와 마지막에 추가하라.
+    <p>4. 단어의 첫 번째 문자를 받아 단어의 첫 번째와 마지막에 추가하라.
 
         예) Swift ===> SSwiftS</p>
 
@@ -31,89 +31,154 @@
 
     <p>7. 단어의 시작이 Java로 시작하면 true 그렇지 않으면 false를 출력하라.</p>
 
-    <p>8. 주어진 두 정수중 적어도 하나가 50이상 99이하이면 true 아니면 flase를 출력하라.</p>
+    <p>8. 주어진 두 정수중 적어도 하나가 50이상 99이하이면 true 아니면 false 출력하라.</p>
 
-    <p>9. 세 개의 정수중 적어도 하나가 50이상 99이하이면 true 아니면 flase를 출력하라.</p>
+    <p>9. 세 개의 정수중 적어도 하나가 50이상 99이하이면 true 아니면 false 출력하라.</p>
 
     <p>10. 주어진 단어의 5번째부터 Script라는 단어가 있으면 Script를 제외한 단어를 반환하고 그렇지 않으면 원래의 문자를 반환하라.</p>
 
     <script>
         //1
-        let word = 'python';
-        let py = 'py'
-        if (word.slice(0, 2) != py) {
-            let rst = py.concat(word);
-            console.log(rst);
-        } else {
-            console.log(word);
+        function addPy(word) {
+            // if (word.startsWith("Py")) {
+            //     return word;
+            // } else {
+            //     return 'Py' + word;
+            // }
+            return word.startsWith('Py') ? word : 'Py' + word;
+            //삼항연산자로 true false일때는 한줄요약 가능
+        }
+        console.log(addPy("thon")); // Python
+        // startsWith() 지정된 문자열로 시작하는 경우 true가 반환됩니다
+        // endsWith() 지정된 문자열로 끝나는 경우 true가 반환됩니다
+
+        //1-1
+        function addPyToWord(word) {
+            var newWord;
+
+            if (word.indexOf("Py") === 0) {
+                newWord = word;
+            } else {
+                newWord = "Py" + word;
+            }
+
+            return newWord;
+            // 리턴은 조건문 마지막에 배치하는게 가독성이 좋다
+        }
+        console.log(addPyToWord("example")); // "Pyexample"
+        console.log(addPyToWord("Python")); // "Python"
+        // indexOf()를 사용하여 0으로 검색되면 그대로 반환 아니면 Py 붙이기
+
+
+        //2 slice() 메소드 사용  slice(startIndex, endIndex)
+        function removeChar(word, index) {
+            let newWord = word.slice(0, index) + word.slice(index + 1);
+            return newWord;
         }
 
-        //2 공부해보기
-        let word2 = 'python';
-        let del = 3;
-        word2.slice(del - 1, 1);
-        let rst2 = word2.replace();
+        // 인덱스 앞뒤로 잘라서 붙이기
+        console.log(removeChar("Python", 3)); // "Pyton"
+
+        //2-1 substr() 메소드 사용  substr(startIndex, length)
+        function removeChar(word, pos) {
+            let newWord = word.substr(0, pos) + word.substr(pos + 1);
+            return newWord;
+        }
+
+        //2-2 replace() 메소드 사용
+        function removeChar(word, pos) {
+            let newWord = word.replace(word[pos], "");
+            return newWord;
+        }
+
 
         //3
-        let word3 = 'Swift';
-        let word3_1 = word3.slice(1);
-        let word3_2 = word3.slice(0, 1);
-        console.log(word3_1 + word3_2);
+        function swapFirstAndLastChars(word) {
+            if (word.length <= 1) {
+                return word;
+            }
+            return word[word.length - 1] + word.slice(1, -1) + word[0];
+            // 문자열[3] 3번 인덱스 반환
 
-        //4
-        let word4 = 'Swift';
-        let word4_1 = word4.slice(0, 1);
-        let word4_2 = word4_1 + word4 + word4_1
-        console.log(word4_2);
+        }
+        console.log(swapFirstAndLastChars("Swift")); // "twifS"
+        // [0]은 범위 밖이거나 숫자가아니면 undefined 반환
+        //charAt()은 범위벗어나면 빈문자열 반환, 숫자가 아니면charAt(0) 취급
+
+
+        //4 charAt() 사용  [0]도 사용가능
+        function addFirstAndLastChars(word) {
+            return word.charAt(0) + word + word.charAt(0)
+
+        }
+        onsole.log(addFirstAndLastChars("Swift"));
 
         //5
-        let number5 = 27;
-        if ((number5 % 3) == 0 || (number5 % 7) == 0) {
-            console.log('5번은 ' + true);
-        } else {
-            console.log('5번은 ' + false);
+        function isMultipleOf3Or7(n) {
+            if (n > 0 && (n % 3 === 0 || n % 7 === 0)) {
+                return true;
+            } else {
+                return false;
+            }
         }
-
+        console.log(isMultipleOf3Or7(9)); // true
         //6
 
-        let word6 = '안녕하세요오오';
-        let word6_1 = word6.slice(-3);
-        console.log(word6_1 + word6 + word6_1);
+        function firstlastword(word) {
+            if (word.length >= 3) {
+                let last3 = word.substring(word.length - 3);
+                return last3 + word + last3;
+            } else {
+                return false;
+            }
+
+        }
+        console.log(firstlastword('호오올리'));
 
         //7
-        let word7 = 'Ja2vaㄴㅇㄹㄴㅇㄹ';
-        let word7_1 = word7.slice(0, 4)  //Java
-        if ((word7.slice(0, 4)) == 'Java') {
-            console.log('7번은 ' + true);
-        } else {
-            console.log('7번은 ' + false);
+
+        function firstJava(word) {
+            if (word.startsWith('Java')) {
+                return true;
+            } else {
+                return false;
+            }
         }
-        // search , indexOf 써서 0번으로 검색되면 true false 반환하게 공부 해보기?
+
+        console.log(firstJava('JavasSSSS'));
 
         //8
-        let a = 49;
-        let b = 45;
-        if ((a >= 50 && a <= 90) || (b >= 50 && b <= 90)) {
-            console.log('8번은 ' + true);
-        } else {
-            console.log('8번은 ' + false);
+
+        function fiftyninty(num1, num2) {
+            if ((num1 >= 50 && num1 <= 90) || (num2 >= 50 && num2 <= 90)) {
+                return `'8번은 '` + true;
+            } else {
+                return `'8번은 '` + false;
+            }
         }
+        console.log(fiftyninty(85, 40));
 
         //9
-        let c = 30;
-        if ((a >= 50 && a <= 90) || (b >= 50 && b <= 90) || (c >= 50 && c <= 90)) {
-            console.log('9번은 ' + true);
-        } else {
-            console.log('9번은 ' + false);
+        function checknumthree(num1, num2, num3) {
+            if ((num1 >= 50 && num1 <= 90) || (num2 >= 50 && num2 <= 90) || (num3 >= 50 && num3 <= 90)) {
+                return `'9번은 '` + true;
+            } else {
+                return `'9번은 '` + false;
+            }
         }
+        console.log(checknumthree(60, 40, 50));
 
         //10
-        let word10 = 'javaScript';
-        let word10_1 = word10.slice(4, 9); //Script
-        if (word10.slice(4, 9) == 'Script') {
 
+        function removeScript(word) {
+            if (word.substring(4).includes("Script")) {
+                // includes() 지정된 문자열이 포함된 경우 true
+                return word.replace("Script", "");
+            } else {
+                return word;
+            }
         }
-
+        console.log(removeScript('jjjsScript'));
 
 
     </script>

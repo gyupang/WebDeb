@@ -36,11 +36,14 @@
         }
 
         //1-2번째방법
-        function leapyear(year) {
-            return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
-
+        function isLeapYear(year) {
+            if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
+                return true;
+            } else {
+                return false;
+            }
+            console.log(isLeapYear(2026))
         }
-        console.log(leapyear(2026))
 
 
         //2

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아코디언메뉴</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <style>
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+        }
+
+        .accordion {
+            border: none;
+            outline: none;
+            background: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .accordion:last-child {
+            border-bottom: none;
+
+        }
+
+        .accordion i {
+            float: right;
+        }
+
+        .panel {
+            padding: 0 18px;
+            background: #fff;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s;
+        }
+
+        .active,
+        .accordion:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>아코디언 메뉴</h1>
+        <button class="accordion">내용1 <i class="fa-solid fa-plus"></i></button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat.</p>
+        </div>
+        <button class="accordion">내용2<i class="fa-solid fa-plus"></i></button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat.</p>
+        </div>
+        <button class="accordion">내용3<i class="fa-solid fa-plus"></i></button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat.</p>
+        </div>
+
+
+
+
+    </div>
+
+    <script>
+        const acc = document.getElementsByClassName('accordion');
+        let i;
+        for (let i = 0; i < acc.length; i++) {
+            acc[i].addEventListener('click', function () {
+                this.classList.toggle('active');
+                const panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                    this.children[0].classList.add('fa-plus');
+                    this.children[0].classList.remove('fa-minus');
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + 'px';
+                    this.children[0].classList.remove('fa-plus');
+                    this.children[0].classList.add('fa-minus');
+                }
+            })
+        }
+
+
+    </script>
+
+</body>
+
+</html>

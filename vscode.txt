@@ -5,3 +5,8 @@ alt shift 위아래 - 행위아래 복사
 alt ctrl 위아래 - 다중행선택하여 한번에 수정
 
 ctrl / - 한번에 주석처리
+ctrl d - 같은단어 선택
+ctrl shift L - 한번에 선택
+ctrl x - 한줄삭제
+
+드래그+() - 괄호안에 넣어줌

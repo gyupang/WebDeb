@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML PRACTICE</title>
+
+    <style>
+        nav {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            background-color: lightgray;
+        }
+
+        nav div {
+            /* height: 40px; */
+
+        }
+
+        .accordion:after {
+            content: '\002B';
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        nav div:hover {
+            background-color: #bbb;
+        }
+
+        .panel {
+            max-height: 300px;
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            display: none;
+            /* overflow: hidden; */
+            transition: max-height 0.2s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>2.아코디언 메뉴</h1>
+        <p>안에 들어가는 내용은 자유롭게 구상</p>
+        <nav class="flex-nav">
+            <div class="accordion">section 1</div>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="accordion">section 2</div>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="accordion">section 3</div>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</p>
+            </div>
+
+
+        </nav>
+
+
+
+    </div>
+
+    <script>
+        let acc = document.getElementsByClassName('accordion');
+        let i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener('click', function () {
+                this.classList.toggle("active");
+                let submenu = this.nextElementSibling;
+                if (submenu.style.display === "block") {
+                    submenu.style.display = "none";
+                } else {
+                    submenu.style.display = "block";
+                }
+
+            })
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

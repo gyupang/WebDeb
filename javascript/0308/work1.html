@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Quiz</title>
+</head>
+
+<body>
+
+    <p></p>1. 세 개의 정수중 가장 큰 수를 찾는 코드를 작성하라.
+
+    <p></p>2. 두 정수중 100에 가까운 정수를 찾는 코드를 작성하라.
+
+    <p></p>3. 두 정수가 모두 40에서 60범위 안에 있거나 70에서 100의 범위에 있는지 확인하는 코드를 작성하라.
+
+    <p></p>4. 임의의 단어중 한 자가 2번째에서 4번째 안에 있는지 확인하는 코드를 작성하라.
+    예) Python , y ===> true
+
+    <p></p>5. 세 개의 양의 정수중 마지막 숫자가가 같은지 확인하는 코드를 작성하라.
+
+    <p></p>6. 임의의 단어를 받아 처음 세 자를 소문자로 고쳐 출력하라. 단, 문자의 길이가 3자 이하이면 모두 대문자로 출력시켜라.
+
+    <p></p>7. 학생의 시험점수를 기록하는 배열을 작성하고 평균을 구해 90이상이면 A, 80이상이면 B , 70이상이면 C, 60이상이면 D 그 미만이면 F를 출력시켜라.
+
+    <p></p>8. 두 개의 정수의 합을 구해 합이 50에서 80범위 안에 있으면 65를 반환하고 그렇지 않으면 80을 반환하라.
+
+    <p></p>9. 두 개의 정수 중 하나가 8이거나 두 수의 합 또는 차가 8이 되면 true를 반환하라.
+
+    <p></p>10.
+    1) loop검색 알고리즘을 이용하여 배열에서 주어진 요소의 색인을 찾는 코드를 작성하라.
+    2) 삼항검색 알고리즘을 이용하여 배열에서 주어진 요소의 색인을 찾는 코드를 작성하라.
+
+    테스트데이터 :
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3 ====> 2
+
+</body>
+<script>
+    //1
+    function maxNum(num11, num12, num13) {
+        return Math.max(num11, num12, num13);
+    }
+    console.log(maxNum(45, 23, 76));
+
+    //2
+    function findClosestTo100(a, b) {
+        const diffX = Math.abs(a - 100);
+        const diffY = Math.abs(b - 100);
+
+        if (diffX === diffY) {
+            // 두 수의 차이가 같은 경우, 더 작은 수를 반환합니다.
+            return Math.min(a, b);
+        } else if (diffX < diffY) {
+            return a;
+        } else {
+            return b;
+        }
+    }
+    console.log(findClosestTo100(90, 120));
+
+    //3
+    // if 안쓰고 return 에서 true false 선택하기
+    function isInRange(x, y) {
+        const inRange1 = (x >= 40 && x <= 60) && (y >= 40 && y <= 60);
+        const inRange2 = (x >= 70 && x <= 100) && (y >= 70 && y <= 100);
+        return inRange1 || inRange2;
+    }
+    console.log(range(40, 70))
+
+    //4
+    //슬라이스한것이 include() 하고있는지 확인
+    function findWord(word4, find4) {
+        if (word.length < 4) {
+            return false;
+        }
+        return word.slice(1, 4).includes(find4);
+
+    }
+    console.log(findWord('Python', 'o'));
+
+    //5
+    function lastDigit(num51, num52, num53) {
+        const lastDigit1 = num51 % 10;
+        const lastDigit2 = num52 % 10;
+        const lastDigit3 = num53 % 10;
+
+        return lastDigit1 === lastDigit2 && lastDigit2 === lastDigit3;
+    }
+    console.log(lastDigit(123, 456, 789)); // false
+
+    //5-1 숫자는 length 속성이없어서 문자열로 변환한다음 마지막글자를 비교해줘야한다.
+
+    function lastDigit(num1, num2, num3) {
+        const str1 = String(num1);
+        const str2 = String(num2);
+        const str3 = String(num3);
+
+        const lastChar1 = str1.charAt(str1.length - 1);
+        const lastChar2 = str2.charAt(str2.length - 1);
+        const lastChar3 = str3.charAt(str3.length - 1);
+
+        return lastChar1 === lastChar2 && lastChar2 === lastChar3;
+    }
+
+
+    //6
+    //substing사용 인덱스 기준  substr(startIndex, length)은 길이로 추출
+    function fixStart(str6) {
+        if (str6.length <= 3) {
+            return str6.toUpperCase();
+        } else {
+            return str6.substring(0, 3).toLowerCase() + str6.substring(3);
+        }
+    }
+    //7
+
+    //8
+    function eight(num8, num81) {
+        if ((num8 + num81) >= 50 && (num8 + num81) <= 80) {
+            return `8번 ` + 65;
+        } else {
+            return `8번 ` + 80;
+        }
+    }
+    console.log(eight(50, 18))
+
+    //9
+    function nine(num9, num91) {
+        if ((num9 == 8 || num91 == 8) ||
+            Math.abs(num9 - num91) == 8 || Math.abs(num9 + num91) == 8) {
+            return `9번 ` + true;
+        } else {
+            return `9번 ` + false;
+        }
+    }
+    console.log(nine(20, 28))
+//10
+
+
+
+</script>
+
+</html>

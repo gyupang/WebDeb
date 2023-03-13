@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn {
+            width: 30px;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        .bar1,
+        .bar2,
+        .bar3 {
+            height: 3px;
+            background-color: #333;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+
+        .change .bar1 {
+            transform: translateY(10px) rotate(-45deg);
+        }
+
+        .change .bar2 {
+            opacity: 0;
+        }
+
+        .change .bar3 {
+            transform: translateY(-6px) rotate(45deg);
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- 햄버거로 누르면 x표시 만드는거 -->
+
+    <div class="btn" onclick="changeFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+
+
+
+
+
+
+</body>
+<script>
+
+    function changeFunction(x) {
+        x.classList.toggle('change')
+    }
+    //const btn = document.querySelector('.btn');
+    // 다이렉트로 안걸려면 btn.addEventListener('click',changeFunction)
+
+
+</script>
+
+</html>

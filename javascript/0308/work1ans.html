@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1
+        function max_fo_three(x, y, z) {
+            const arr = [x, y, z];
+            let max = -Infinity;
+            for (let i = 0; i < arr.length; i++) {
+                if (max < arr[i]) {
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+
+        //2
+        function near_100(x2, y2) {
+            if (x2 == y2) {
+                return false;
+            }
+            let xa = Math.abs(x2 - 100);
+            let ya = Math.abs(y2 - 100);
+
+            if (xa < ya) {
+                return x2;
+            }
+
+            if (xa > ya) {
+                return y2;
+            }
+            return 0;
+            // 리턴0? 공부하기
+        }
+        console.log(near_100(99, 102));
+        //4
+        function check_char(str, char) {
+            let ctr = 0;
+            for (let i = 0; i < str.length; i++) {
+                if ((str.charAt(i) == char) && (i >= 1 && i <= 3)) {
+                    ctr = 1;
+                    break;
+                }
+            }
+        }
+        if (ctr == 1) return true;
+        return false;
+        //중괄호 안치고 바로쓰는거 공부
+
+        //5
+        // 무슨식임? 공부하기
+        function last_digit(x5, y5, z5) {
+            if (x5 > 0 && y5 > 0 && z5 > 0) {
+                return (x5 % 10 == y5 % 10 &&
+                    y5 % 10 == z5 % 10 &&
+                    z5 % 10 == x5 % 10);
+            } else {
+                return false;
+            }
+        }
+
+        //6
+        function fixStart(str6) {
+            if (str6.length <= 3) {
+                return str6.toUpperCase();
+            } else {
+                return str6.substring(0, 3).toLowerCase() + str6.substring(3);
+            }
+        }
+
+        //7
+        function aver(scr) {
+            // let sum = 0;
+            // for (let i = 0; i < scr.length; i++) {
+            //     sum += scr[i];
+            // }
+
+            //배열 합구하는 방법 reduce 공부하기
+            const sum = scr.reduce((arr, arrc, idx) => {
+                return arr += arrc;
+            }, 0);
+
+            const avr = sum / scr.length;
+            if (avr > 89) {
+                return "A";
+            } else if (avr > 79) {
+                return "B";
+            } else if (avr > 69) {
+                return "C";
+            } else if (avr > 59) {
+                return "D";
+            } else {
+                return "F";
+            }
+        }
+        const stScore = [100, 90, 80, 90, 50];
+        console.log(aver(stScore));
+
+        //10
+        // => 축약형 공부하기
+        // const listSearch = (arr, item) => {
+        function listSearch(arr, item) {
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] === item) {
+                    return +i;
+                }
+            }
+            return -1;
+        }
+
+
+        const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        console.log(listSearch(nums, 3));
+
+
+
+    </script>
+</body>
+
+</html>

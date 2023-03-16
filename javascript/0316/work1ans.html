@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+</body>
+
+<script>
+    //1
+    function reverse_str(str) {
+        return str.split("").reverse().join("");
+
+    }
+    console.log(reverse_str('안녕하세요? 반갑습니다.'));
+    console.log(reverse_str('1233445'));
+
+    //2
+
+
+
+    //3
+    function alphabet_str(str) {
+        return str.split("").sort().join("").trim();
+
+    }
+    console.log(alphabet_str('라 마 가 나 자차쿠호파'));
+
+    //4
+    function uppercase(str) {
+        let array = str.split(' ');
+        let newArray = [];
+        for (let i = 0; i < array.length; i++) {
+            newArray.push(array[i].charAt(0).toUpperCase() + array[i].slice(1));
+        }
+        return newArray.join(' ');
+    }
+    console.log(uppercase('the quick brown fox'));
+
+</script>
+
+</html>

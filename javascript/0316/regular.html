@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regular expression</title>
+    <style>
+        .play {
+            width: 560px;
+            height: 315px;
+            border: 2px solid #ddd;
+            box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+            position: fixed;
+            top: 30%;
+            left: 40%;
+            transform: translateX(-50%);
+            display: block;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <form action="">
+        <h1>이메일을 입력하세요</h1>
+        <div>
+            <input type="text" id="email" name="email" placeholder="이메일입력">
+            <button type="button" onclick="verifyEmail()">지금 구독</button>
+
+        </div>
+
+    </form>
+
+    <input type="text" id="youtube-link" name="youtube-link">
+    <button onclick="verifyoutube()">재생하기</button>
+
+
+    <div class="play">
+        <iframe width="560" height="315" src="" id="ytb" title="youtube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+    <!-- 아이프레임이 뭐임 공부 -->
+
+    <script>
+        const verifyEmail = () => {
+            const emailVail = document.getElementById('email').value;
+            const regExp = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/gm;
+            // 슬래시 /로 둘러싸인 문자열은 정규 표현식 리터럴
+            // g플래그는 전역 검색(global search)
+            // m 플래그는 다중 행(multi-line search) 검색
+            if (emailVail.match(regExp) != null) {
+                console.log("검증완료");
+            } else {
+                console.log("이메일이 아님");
+            }
+
+        }
+
+        const verifyoutube = () => {
+            const youtubeSrc = document.getElementById('youtube-link').value;
+            const regex = /(?:https?:\/\/)?(?:www\.)?youtu\.?be(?:\.com)?\/(?:embed\/|watch\?v=)?([a-zA-Z0-9_-]{11})/gm;
+            const result = youtubeSrc.match(regex);
+            if (result) {
+                const link = 'https://youtube.com/embed/' + result[1] + '?autoplay=1&mute=1';
+                document.getElementById('ytb').src = link;
+            } else {
+                console.log('유효한 유튜브 주소가 아닙니다.');
+            }
+        };
+
+
+
+    </script>
+
+</body>
+
+</html>

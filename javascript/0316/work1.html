@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        1. 글자 또는 숫자를 거꾸로 반전 시키는 함수를 작성하라.
+        예) 32243 === > 34223, 안녕하세요 ===> 요세하녕안
+    </p>
+
+    <p>
+        2. 문자열의 모든 조합을 출력하는 함수를 작성하라.
+        예) dog ==> d, o, do, g, dg, og, dog
+    </p>
+    <p>
+        3. 입력한 문자를 알파벳 순으로 정렬하여 출력하는 함수를 작성하라.
+    </p>
+
+    <p>
+        4. 문자열을 받아서 각 단어의 첫자를 대문자로 출력하는 함수를 작성하라.
+        예) the quick brown fox ==> The Quick Broun Fox
+    </p>
+
+    <p>
+        5. 문자열을 받아 문자열 내의 모음의 갯수를 출력하는 함수를 작성하라.
+    </p>
+
+    <script>
+        //1
+        function reverse(str1) {
+            let rev = str1.split('').reverse().join('');
+            return rev;
+        }
+        console.log('1번은 ' + reverse('124515'));
+        //2
+
+
+
+
+
+        //3
+        function abc(str3) {
+            let sort = str3.split('').sort().join('');
+            return sort.trim();
+        }
+        console.log('3번은 ' + abc('hello java world'));
+
+        //4
+        function upWord(str4) {
+            let upword = str4.split(' ');
+            for (let i = 0; i < upword.length; i++) {
+                upword[i] = upword[i][0].toUpperCase() + upword[i].substring(1);
+            }
+
+            return upword.join(' ');
+        }
+        console.log('4번은 ' + upWord('hello java world!'));
+
+        //5
+        let eee5 = ['a', 'e', 'i', 'o', 'u'];
+        function aei(str5) {
+            let splt = str5.split('');
+
+            for (let i = 0; i < splt.length; i++) {
+                for (let j = 0; j < eee5.length; j++) {
+                    if (splt[i] == eee5[j]) {
+                        console.log(splt[i]); // 모음 출력
+                    }
+                }
+            }
+        }
+        console.log('5번은 ' + aei('java class study'));
+
+
+//5-1 gpt 결과
+// function countVowels(str) {
+//   let vowels = ['a', 'e', 'i', 'o', 'u'];
+//   let count = 0;
+
+//   for (let i = 0; i < str.length; i++) {
+//     if (vowels.includes(str[i].toLowerCase())) {
+//       count++;
+//     }
+//   }
+
+//   console.log('갯수', count);
+// }
+// countVowels('Hello, world!');
+
+    </script>
+
+</body>
+
+</html>

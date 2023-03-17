@@ -24,8 +24,23 @@
     console.log(reverse_str('1233445'));
 
     //2
+    // 공부하기
+    function subs(str) {
+        const result = [];
+        function s_combination(start, curr) {
+            if (curr.length > 0) {
+                result.push(curr);
+            }
+            for (let i = start; i < str.length; i++) {
+                s_combination(i + 1, curr + str[i]);
+            }
+        }
+        s_combination(0, '')
+        return result;
+    }
 
-
+    const str = 'dog'
+    console.log(subs(str));
 
     //3
     function alphabet_str(str) {
@@ -44,6 +59,21 @@
         return newArray.join(' ');
     }
     console.log(uppercase('the quick brown fox'));
+
+    //5
+    function solution(str) {
+        let vowel_list = 'aeiouAEIOU';
+        let vcount = 0;
+        for (var x = 0; x < str.length; x++) {
+            if (vowel_list.indexOf(str[x]) !== -1) {
+                vcount += 1;
+            }
+        }
+        return vcount;
+    }
+    console.log(solution("Hi my name is james lee!"))
+
+
 
 </script>
 

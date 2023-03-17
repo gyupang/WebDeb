@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+2번 풀이?
+
+위 코드는 재귀함수를 이용하여 부분집합을 생성합니다.
+함수 subs() 내에 선언된 s_combination() 함수가 부분집합을 생성하는 함수입니다.
+먼저, 재귀함수를 호출할 때 현재의 부분집합(curr)을 배열(result)에 추가하고,
+start 매개변수를 증가시키며 인덱스를 증가시키면서 재귀적으로 부분집합을 생성합니다.
+
+재귀 함수란, 함수 내부에서 자기 자신을 호출하는 함수를 의미합니다. 이 코드에서는 s_combination 함수 내부에서 자기 자신을 호출하는 것으로, 이를 통해 문자열 str의 모든 부분 문자열(substring)을 찾는 알고리즘을 구현하고 있습니다.
+
+start는 현재까지 선택한 문자열의 끝 인덱스를 의미하며, curr은 현재까지 선택한 문자열을 나타냅니다. result는 부분 문자열들을 담는 배열입니다.
+
+if (curr.length > 0) 구문은 curr이 빈 문자열이 아닌 경우에만 result에 추가하도록 하는 조건문입니다. 이를 통해 길이가 0인 빈 문자열은 부분 문자열로 인정되지 않습니다.
+
+for 루프는 start부터 문자열 str의 끝까지 반복하면서, i번째 문자를 현재까지 선택한 문자열 curr에 추가하고, start를 i + 1로 바꾸어 재귀 호출합니다. 이를 통해 모든 부분 문자열을 찾아냅니다.
+
+예를 들어, 문자열 dog를 입력받았을 때, 이 함수가 호출되면 다음과 같은 과정을 거칩니다.
+
+1. s_combination(0, '')이 호출됩니다.
+2. curr이 빈 문자열인 경우, if문에서 result에 추가하지 않고 넘어갑니다.
+3. for 루프에서 i가 0부터 2까지 반복하면서 s_combination(1, 'd'), s_combination(2, 'do'), s_combination(3, 'dog')을 재귀 호출합니다.
+4. s_combination(1, 'd')이 호출되면, curr이 빈 문자열이 아니므로, result에 ['d']가 추가됩니다.
+5. for 루프에서 i가 1부터 2까지 반복하면서 s_combination(2, 'do'), s_combination(3, 'dog')을 재귀 호출합니다.
+6. s_combination(2, 'do')이 호출되면, curr이 빈 문자열이 아니므로, result에 ['d', 'do']가 추가됩니다.
+7. s_combination(3, 'dog')이 호출되면, curr이 빈 문자열이 아니므로, result에 ['d', 'do', 'dog']가 추가됩니다.
+최종적으로 result에는 ['d', 'do', 'dog']가 담겨 반환됩니다.
+
+
+
+     -->
+
+</body>
+
+</html>

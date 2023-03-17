@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1번 -->
+    <input type="file" id="file" onchange="fileUpload(this.value)">
+
+    <!-- 9번 -->
+
+
+
+    <script>
+        // 1번
+        function fileUpload(fileVal) {
+            const reg = new RegExp('html$', 'i') // 정규식검사 html i로 대소문자 구분암함
+            if (reg.test(fileVal)) {
+                console.log('html 파일');
+            } else {
+                console.log('html 파일이 아닙니다.');
+            }
+
+        }
+
+        //9번
+        function solution(s) {
+            let p_cnt = 0;
+            let y_cnt = 0;
+            for (let i = 0; i < s.length; i++) {
+                if (s[i] === 'p' || s[i] === 'P') {
+                    p_cnt++;
+                } else if (s[i] === 'y' || s[i] === 'Y') {
+                    y_cnt++;
+                }
+            }
+            return p_cnt === y_cnt ? true : false;
+            // for 문 안에 리턴있으면 false 나옴?? 공부
+        }
+        console.log(solution('py'));
+
+        //9-1번
+        function solution2(s) {
+            s.toUpperCase().split('P').length === s.toUpperCase().split('Y').length
+        }
+        // 뭐임 이거 공부해보기
+        //9-2번
+        let p = s.match(/p/gi);
+        let y = s.match(/y/gi);
+        let pct = (p != null) ? p.length : 0;
+        let yct = (y != null) ? p.length : 0;
+        return pct == yct ? true : false;
+
+    </script>
+</body>
+
+</html>

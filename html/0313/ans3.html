@@ -49,7 +49,7 @@
             padding: 0px 15px;
             border: 1px solid #ccc;
             height: 300px;
-            /* display: none; */
+            display: none;
         }
     </style>
 
@@ -80,7 +80,6 @@
 
 
     <script>
-// 맨처음 시작에 문제있음 공부해보기
 
         function openCity(e, cityName) {
             const tabcontent = document.getElementsByClassName('tabcontent');
@@ -94,8 +93,8 @@
             document.getElementById(cityName).style.display = 'block';
             e.currentTarget.classList.add('active');
         }
-        document.getElementById('fcilck');
-        // 시작함수
+        document.getElementById('fcilck').click();
+
     </script>
 
 </body>

@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 25px;
+    padding-right: 25px;
+
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+nav {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+nav a>i {
+    font-size: 25px;
+}
+
+.title h1 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+nav.category {
+    overflow: hidden;
+    white-space: nowrap;
+    padding-top: 10px;
+}
+
+nav.category a {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 8px 15px;
+    margin-right: 15px;
+    color: #888;
+}
+
+nav.category a.act {
+    background-color: #d3b398;
+    font: #fff;
+
+}
+
+main>p {
+    font-size: 12px;
+    color: #808080;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.fa-arrow-down {
+    margin-left: 5px;
+}
+
+.list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list>li {
+    display: flex;
+    height: 120px;
+}
+
+.imgbox {
+    position: relative;
+    margin-right: 20px;
+    width: 120px;
+}
+
+.imgbox>* {
+    position: absolute;
+    height: 120px;
+}
+
+.bkboxa,
+.bkboxb,
+.bkboxc {
+    width: 120px;
+    height: 70px;
+    z-index: 0;
+    top: 50px;
+    border-radius: 10px;
+}
+
+.bkboxa {
+    background-color: #f2f7ff;
+
+}
+.bkboxb {
+    background-color: #fcf0f0;
+
+}
+.bkboxc {
+    background-color: #ebf4ee;
+
+}
+
+.img-fluid {
+    width: 97px;
+    height: 88px;
+    object-fit: cover;
+    top: 32px;
+    left: calc(50% -48px);
+}
+
+.like {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    background: #fff;
+    border-radius: 5px;
+    top: 90px;
+    left: 85px;
+}
+
+.like i {
+    font-size: 13px;
+    color: #bfc2c8;
+
+}
+
+.ptitle {
+    display: flex;
+    padding-top: 45px;
+}
+
+.ptitle h1 {
+    font-weight: 700;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    margin-right: 15px;
+
+}
+
+.textbox span {
+    color: #ffbb56;
+    font-weight: 600;
+}
+
+.textbox p.contents {
+    margin: 0;
+    padding: 0;
+    padding: 8px 0;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.textbox p.price {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+.adver{
+    height: 120px;
+    width: 100%;
+    position: relative;
+
+}

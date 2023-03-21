@@ -101,10 +101,12 @@ main>p {
     background-color: #f2f7ff;
 
 }
+
 .bkboxb {
     background-color: #fcf0f0;
 
 }
+
 .bkboxc {
     background-color: #ebf4ee;
 
@@ -168,9 +170,74 @@ main>p {
     padding: 0;
     margin-top: 10px;
 }
-.adver{
+
+.adver {
     height: 120px;
     width: 100%;
     position: relative;
 
+}
+
+.saly {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    z-index: 2;
+}
+
+.saly-back {
+    margin-top: 25px;
+    padding: 30px 25px;
+    width: 100%;
+    height: 95px;
+    border-radius: 15px;
+    background-image: linear-gradient(to right, #E2E9FF, #FFEAEA);
+}
+
+.saly-back h1,
+.saly-back p {
+    margin: 0;
+    padding: 0;
+}
+
+.saly-back h1 {
+    font-size: 14px;
+}
+
+.saly-back p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #808080;
+}
+
+.saly-back span {
+    background: #ffbb56;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 2px;
+    color: #fff;
+
+}
+
+/* NAV */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #f2f7ff;
+    overflow-x: hidden;
+    transition: all 0.4s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 10px 10px 10px 35px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    transition: all 0.4s;
 }

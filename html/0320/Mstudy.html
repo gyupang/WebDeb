@@ -9,13 +9,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="icon.css">
     <link rel="stylesheet" href="Mstudy.css">
+    <script src="Mstudy.js"></script>
 </head>
 
 <body>
-    <div class="container">
+    <!-- nav -->
+    <div class="sidenav" id="mySidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+            <i class="fa-solid fa-xmark"></i>
+        </a>
+        <a href="#">We are</a>
+        <a href="#">Product</a>
+        <a href="#">Service</a>
+        <a href="#">Customer</a>
+
+
+
+    </div>
+
+    <div class="container" id="main">
         <header>
             <nav>
-                <a href="#"><i class="icon-list"></i></a>
+                <a href="javascript:void(0)" onclick="openNav()"><i class="icon-list"></i></a>
                 <a href="#"><i class="icon-search"></i></a>
             </nav>
 
@@ -75,7 +90,13 @@
 
 
                 </li>
-                <li class="adver"></li>
+                <li class="adver">
+                    <img src="img/Saly-3.png" alt="saly" class="saly">
+                    <div class="saly-back">
+                        <h1>Free Shipping</h1>
+                        <p>when ordering <span>from 4000\</span></p>
+                    </div>
+                </li>
                 <li>
                     <div class="imgbox">
                         <div class="bkboxc"></div>

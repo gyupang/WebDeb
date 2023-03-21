@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>1. 임의의 세 개의 정수중 가장 큰 정수를 찾는 코드를 작성하라.</p>
+    <p>2. 임의의 두 개의 정수중 100에 가까운 정수를 찾는 코드를 작성하라.</p>
+    <p>3. 두 숫자가 40~60범위에 있는지 아니면 70에서 100의 범위에 있는지 확인하는 코드를 작성하라.</p>
+
+    <p>4. 40~60범위에 있는 정수 중 큰 수를 찾는 코드를 작성하라.</p>
+
+    <p>5. 임의의 문자열에서 두 번째에서 네 번째위치에 문자가 있는지 확인하는 코드를 작성하라.</p>
+
+    <p>6. 임의의 세개의 정수중 마지막 숫자가 같은지 확인하는 코드를 작성하라.</p>
+
+    <p>7. 영어로 된 문자열에서 처음 세개의 문자를 소문자로 변환하여 출력하는 코드를 작성하라.</p>
+    단, 문자열의 길이가 3보다 작으면 모두 대문자로 출력하라.
+
+    <p>8. 여러 과목의 시험점수를 배열로 받아 평균에 따라 A, B, C, D, ,F 등급을 부여해 출력 시켜라.</p>
+
+    <p>9. 임의의 두 정수의 합이 50~80 이면 65를 반한하고 그렇지 않으면 80을 반환하라.</p>
+
+    <p>10. 임의의 두 정수 중 하나가 8인지 또는 두 정수의 합 또는 차가 8인지 확인하는 코드를 작성하라.</p>
+
+    <p>11. 임의의 세 정수를 받아 세 개의 숫자가 모두 같으면 30을 반환하고 두 숫자만 같으면 40을 반환하며 모두 다르면 20을 반환하라.</p>
+
+    <p>12. 임의의 문자를 입력하면 문자를 뒤집어 출력하는 코드를 작성하라.</p>
+
+    <p>13. 임의의 두 숫자중 하나만 7또는 11의 배수가 되는지 확인하는 코드를 작성하라.</p>
+
+    <p>14. 임의의 두 정수중 하나가 15이거나 합계 또는 차가 15이면 true를 반환하는 코드를 작성하라.</p>
+
+    <p>15. 임의의 문자열에서 각 단어의 첫 자를 대문자로 출력 시켜라.</p>
+
+    <script>
+        //1번
+        function maxNum(num11, num12, num13) {
+            return Math.max(num11, num12, num13);
+        }
+        console.log("1번 " + maxNum(45, 23, -76));
+
+        //2번
+        function hundred(num21, num22) {
+            let a = 100 - num21; //60
+            let b = 100 - num22; //80
+            if (a <= b) {
+                return num21;
+            } else {
+                return num22;
+            }
+        }
+        console.log("2번 " + hundred(40, 20));
+        //3번
+        function range(num31, num32) {
+            if ((num31 >= 40 && num31 <= 60) && (num32 >= 40 && num32 <= 60)
+                || (num31 >= 70 && num31 <= 100) && (num32 >= 70 && num32 <= 100)) {
+                return true;
+            } return false
+        }
+        console.log("3번 " + range(50, 40));
+
+        //4번
+        function isInRange(x, y) {
+            let inRange = (x >= 40 && x <= 60) && (y >= 40 && y <= 60);
+            if (inRange) {
+                return (x >= y) ? x : y;
+            } return false;
+        }
+        console.log("4번은 " + isInRange(40, 50));
+
+        //5번
+
+
+        //6번
+        function rest(num61, num62, num63) {
+            let rest1 = num61 % 10;
+            let rest2 = num62 % 10;
+            let rest3 = num63 % 10;
+            return rest1 == rest2 && rest2 == rest3;
+        }
+        console.log("6번은 " + rest(42, 52, 3));
+
+        //7번
+        function firstUp(string7) {
+            if (string7.length >= 3) {
+                return string7.substring(0, 3).toLowerCase() + string7.substring(3)
+            } else {
+                return string7.toUpperCase();
+            }
+        }
+        console.log("7번은 " + firstUp('JAVASCRIPT'));
+        //8번
+        const study = [];
+        function grade() {
+
+
+
+
+        }
+        console.log("8번은 " + grade(42, 52, 3));
+
+    </script>
+
+</body>
+
+</html>

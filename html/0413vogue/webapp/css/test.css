@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	
+}
+
+.rnav {
+	position: absolute;
+	top: 50px;
+	right: 0;
+	display: flex;
+	justify-content: flex-end;
+}
+.language{
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-right: 60px;
+    position: relative;
+}
+.language::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 8px solid #000;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    position: absolute;
+    top: 8px;
+    right: -25px;
+
+}
+.arrow-down.language::after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #000;
+    position: absolute;
+    top: 8px;
+    right: -25px;
+}
+
+.lg{
+    position: relative;
+}
+.lg ul{
+    border: 1px solid #444;
+    height: 150px;
+    width: 230px;
+    text-transform: uppercase;
+    overflow-y: auto;
+    position: absolute;
+    top: 40px;
+    left: -20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.51);
+    display: none;
+    background: #fff;
+    
+
+}
+.lg ul li{
+    padding: 5px 10px;
+}
+.lg ul li:hover{
+    background: #ddd;
+}
+.lg ul li a{
+    color: #999;
+    font-weight: 500;
+}
+
+.language+ul{
+    border: 1px solid #000; 
+    height: 200px;
+    text-transform: uppercase;
+    overflow: auto;
+    
+}
+
+.gudok {
+	margin-right: 30px;
+	padding: 8px 15px;
+	background: #000;
+	color: #fff;
+}
+
+.hamburger {
+	width: 25px;
+    cursor: pointer;
+}
+
+.hamburger span {
+	display: block;
+	height: 2px;
+	width: 100%;
+	background: #000;
+}
+
+
+
+
+
+/* hero */
+
+.hero{
+    width: 1300px;
+    max-width: 100%;
+    margin: 20px auto 0;
+}
+.hero img{
+
+}

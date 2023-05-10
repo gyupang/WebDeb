@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .popup {
+            width: 400px;
+            height: 400px;
+            position: fixed;
+            left: calc(50% - 200px);
+            top: 250px;
+            background: #ededed;
+            box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.25);
+        }
+
+        label.this {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="popup">
+        <h1>팝업창</h1>
+        <label for="box" class="this">다시 열지 않기
+            <input type="checkbox" name="box" id="box" value="ok">
+            <button class="close" onclick="closeBox()">닫기</button>
+        </label>
+
+    </div>
+
+
+    <button onclick="addCookie()">쿠키생성</button>
+    <button onclick="viewCookie()">쿠키보기</button>
+    <button onclick="delCookie()">쿠키삭제</button>
+
+    <script>
+        const box = document.getElementsByClassName("popup")[0];
+        //페이지가 시작될때 쿠키가 있는지 확인 있으면 box.display.none
+        window.onload = getCookies;
+        function getCookies(){
+        if (document.cookie.indexOf("nopop") > -1) {
+            box.style.display = "none";
+        }
+    }
+
+        function viewCookie() {
+            alert(document.cookie);
+
+        }
+        function addCookie() {
+            document.cookie = "mycookie=ok";
+            //mycookie 값 ok 쿠키생성
+        }
+
+        function delCookie() {
+            document.cookie = "mycookie=ok; max-age=0";
+            alert("삭제되었습니다."); 
+        }
+
+        function closeBox() {
+            //체크박스가 체크되어 있는지 확인
+            const chbox = document.getElementById("box");
+            const is_checked = chbox.checked;
+            console.log(is_checked);
+            //체크되어 있으면 쿠키생성
+            if (is_checked) {
+                document.cookie = "pop=nopop";
+            }
+
+            //페이지 닫기
+            box.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
